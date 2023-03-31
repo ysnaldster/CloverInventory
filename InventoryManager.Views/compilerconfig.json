@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/site.css",
+    "inputFile": "wwwroot/scss/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/navbar.css",
+    "inputFile": "wwwroot/scss/navbar.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/main.css",
+    "inputFile": "wwwroot/scss/main.scss"
+  }
+]
