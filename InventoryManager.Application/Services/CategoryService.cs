@@ -1,4 +1,8 @@
-﻿using System;
+﻿using InventoryManager.Domain.Entities;
+using InventoryManager.Domain.Repositories;
+using InventoryManager.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
-    internal class CategoryService : IGenericRestRepository<Category>
+    public class CategoryService : IGenericRestRepository<Category>
     {
-        private readonly InventoryManagerContext _context;
+        private readonly InventoryManagerContext? _context;
 
         public CategoryService(InventoryManagerContext dbContext)
         {
@@ -17,8 +21,7 @@ namespace InventoryManager.Application.Services
 
         public async Task<List<Category>> ItemList()
         {
-            return await _context.Categories
-                .AsNoTracking()
+            return await _context.Categories.AsNoTracking()
                 .ToListAsync();
         }
 

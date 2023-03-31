@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InventoryManager.Domain\InventoryManager.Domain.csproj" />
+    <ProjectReference Include="..\InventoryManager.Infrastructure\InventoryManager.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

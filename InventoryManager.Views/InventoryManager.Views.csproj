@@ -23,4 +23,14 @@
     <Folder Include="Components\Category\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InventoryManager.Application\InventoryManager.Application.csproj" />
+    <ProjectReference Include="..\InventoryManager.Domain\InventoryManager.Domain.csproj" />
+    <ProjectReference Include="..\InventoryManager.Infrastructure\InventoryManager.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,7 @@
-﻿public class Startup
+﻿using InventoryManager.Application.Services;
+using InventoryManager.Infrastructure;
+
+public class Startup
 {
     public Startup(IConfiguration configuration)
     {
@@ -13,6 +16,11 @@
     {
         services.AddRazorPages();
         services.AddServerSideBlazor();
+        //var connectionString =
+          // "User ID=postgres;Password=admin;Host=localhost;Port=5432;Database=inventory_db;";
+        //services.AddNpgsql<InventoryManagerContext>(connectionString);
+        //services.AddScoped<UserService>();
+  
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 
@@ -41,5 +49,8 @@
             endpoints.MapFallbackToPage("/_Host");
         });
 
+        //using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()!.CreateScope();
+        //var context = serviceScope.ServiceProvider.GetRequiredService<InventoryManagerContext>();
+        //context.Database.EnsureCreated();
     }
 }

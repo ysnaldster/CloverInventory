@@ -1,4 +1,8 @@
-﻿using System;
+﻿using InventoryManager.Domain.Entities;
+using InventoryManager.Domain.Repositories;
+using InventoryManager.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
-    internal class ProductService : IGenericRestRepository<Product>
+    public class ProductService : IGenericRestRepository<Product>
     {
         private readonly InventoryManagerContext _context;
 

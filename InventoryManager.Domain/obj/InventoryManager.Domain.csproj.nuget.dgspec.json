@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ysnal\\source\\repos\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {}
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ysnal\\source\\repos\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ysnal\\source\\repos\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
         "projectName": "InventoryManager.Domain",
-        "projectPath": "C:\\Users\\ysnal\\source\\repos\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
         "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ysnal\\source\\repos\\InventoryManager\\InventoryManager.Domain\\obj\\",
+        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
