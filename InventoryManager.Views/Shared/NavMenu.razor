@@ -31,10 +31,12 @@
   </div>
     <AuthorizeView>
         <Authorized>
-            <a @onclick="Logout" href="javascript:void(0)">Logout</a>
+            <button type="button" class="btn btn-danger button-save button-redirect">
+                <a @onclick="Logout" href="javascript:void(0)">Logout</a>
+            </button>
         </Authorized>
         <NotAuthorized>
-            <button type="button" class="btn btn-success button-save button-redirect-login">
+            <button type="button" class="btn btn-success button-save button-redirect">
                 <a href="login">Login</a>
             </button>
         </NotAuthorized>

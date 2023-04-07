@@ -17,23 +17,7 @@ namespace InventoryManager.Application.Services
         {
             _inventoryManagerContext = inventoryManagerContext;
         }
-
-        public List<User> users = new List<User>
-        {
-            new()
-            {
-                UserName = "admin",
-                Password = "admin",
-                Role = "Administrator"
-            },
-            new()
-            {
-                UserName = "user",
-                Password = "user",
-                Role = "User"
-            }
-        };
-        
+ 
         public User? GetUserByUserName(string? username)
         {
             return _inventoryManagerContext.Users.FirstOrDefault(p => p.UserName == username);   

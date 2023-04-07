@@ -32,8 +32,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XENyZWF0ZVByb2R1Y3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/CustomPages/Product/ListProduct.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tUGFnZXNcUHJvZHVjdFxMaXN0UHJvZHVjdC5yYXpvcg==
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/ListProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XExpc3RQcm9kdWN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Index.razor]
@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Shared/SurveyPrompt.razor]

@@ -1,18 +1,18 @@
 ﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
-<div class="container text-center">
+<div class="container m-0 pt-3 pb-3">
     <div class="row">
-        <div class="col-4 container-button-add">
-            <a href="log/registry">
-                <button type="button" class="btn btn-primary">Make transaction</button>
-            </a>
-        </div>
-        <div class="col-4 container-button-add">
-            <a href="product/list">
-                <button type="button" class="btn btn-success">Add Product</button>
-            </a>
-        </div>
-        <div class="col-4">
+        <AuthorizeView Roles="Administrator">
+            <Authorized>
+            <div class="col-4 container-button-add">
+                <a href="log/registry" class="button btn btn-primary">Make Transaction</a>
+            </div>
+            <div class="col-4 container-button-add">
+                <a href="product/list" class="button btn btn-success">Add Product</a>
+            </div>
+            </Authorized>
+        </AuthorizeView>
+        <div class="col-4 p-0">
             <select class="form-select" @onchange="@CategoryChanged">
                 <option value="">Select a category</option>
                 @foreach (var category in _categories)
@@ -48,6 +48,7 @@
     </tbody>
 </table>
 
+@message
 
 @inject ProductService ProductService
 @inject CategoryService CategoryService;
@@ -57,6 +58,8 @@
     //Para cargar temporalmente los productos
     private List<Product> _temporalProducts = new();
     private List<Category> _categories = new();
+
+    string? message;
 
     protected override async Task OnInitializedAsync()
     {

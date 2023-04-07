@@ -7,10 +7,10 @@ svg {
   color: #6EE6BE;
 }
 
-.button-redirect-login {
+.button-redirect {
   margin: 0px 10px;
 }
-.button-redirect-login a {
+.button-redirect a {
   color: white;
   text-decoration: none;
 }
