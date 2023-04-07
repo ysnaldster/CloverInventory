@@ -21,9 +21,12 @@
 </EditForm>
 
 @code {
-
+   
     private User user = new ();
 
+    /// <summary>
+    /// Validate user authentication state by entrance to the app.
+    /// </summary>
     private async Task Authenticate()
     {
         var userAccount = UserService.GetUserByUserName(user.UserName);

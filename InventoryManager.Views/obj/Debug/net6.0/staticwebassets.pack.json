@@ -53,6 +53,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\footer.css",
+      "PackagePath": "staticwebassets\\scss\\footer.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\footer.min.css",
+      "PackagePath": "staticwebassets\\scss\\footer.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\footer.scss",
+      "PackagePath": "staticwebassets\\scss\\footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\home.css",
+      "PackagePath": "staticwebassets\\scss\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\home.min.css",
+      "PackagePath": "staticwebassets\\scss\\home.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\home.scss",
+      "PackagePath": "staticwebassets\\scss\\home.scss"
+    },
+    {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\main.css",
       "PackagePath": "staticwebassets\\scss\\main.css"
     },
@@ -75,18 +99,6 @@
     {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\navbar.scss",
       "PackagePath": "staticwebassets\\scss\\navbar.scss"
-    },
-    {
-      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\site.css",
-      "PackagePath": "staticwebassets\\scss\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\site.min.css",
-      "PackagePath": "staticwebassets\\scss\\site.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\site.scss",
-      "PackagePath": "staticwebassets\\scss\\site.scss"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.InventoryManager.Views.Microsoft.AspNetCore.StaticWebAssets.props",

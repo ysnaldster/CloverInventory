@@ -1,28 +1,12 @@
 ﻿@page "/"
 @inject IJSRuntime js
 
-<PageTitle>Index</PageTitle>
-
-<h1>Welcome</h1>
-
-<AuthorizeView>
-    <Authorized>
-        <h1>Hello, @context.User.Identity.Name!</h1>
-    </Authorized>
-    <NotAuthorized>
-        <h1>Hello desconocido</h1>
-    </NotAuthorized>
-</AuthorizeView>
-
-<AuthorizeView>
-    <Authorized>
-        <br /><br />
-        <button class = "btn btn-outline-primary" @onclick="DisplayGreetingAlert">Display Greeting Alert</button>
-    </Authorized>
-</AuthorizeView>
-
+<Home></Home>
 
 @code{
+
+    /*
+     * 
     [CascadingParameter]
     private Task<AuthenticationState> authenticationState { get; set; }
 
@@ -32,4 +16,6 @@
         var message = $"Hello {authState.User.Identity.Name}";
         await js.InvokeVoidAsync("alert", message);
     }
+}
+     */
 }

@@ -1,0 +1,36 @@
+﻿<div class="container-fluid">
+    <div class="row main-row-home">
+        <div class="col-5 main-titles-1">
+            <div class="row">
+                <h1>
+                    <AuthorizeView>
+                        <Authorized>
+                            <h1>Hello, @context.User.Identity.Name!</h1>
+                        </Authorized>
+                        <NotAuthorized>
+                            <h1>Welcome to inventory manager</h1>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </h1>
+                <h2>
+                    Improve your product
+                    <br>
+                    distribution quality
+                </h2>
+                <h4 class="subtitle-home-1">
+                    Modern warehouse management tool.
+                </h4>
+                <div class="min-container-button">
+                    <button type="button" class="btn btn-success button-explore-products">
+                        <a href="product/list">
+                            Explore products
+                        </a>
+                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-7">
+            <img src="https://i.ibb.co/RhXtNGn/business-Model.jpg" alt="business-Model" class="home-image">
+        </div>
+    </div>
+</div>

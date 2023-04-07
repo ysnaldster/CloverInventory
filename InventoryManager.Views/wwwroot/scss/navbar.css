@@ -6,3 +6,11 @@ svg {
   margin: 0px 20px;
   color: #6EE6BE;
 }
+
+.button-redirect-login {
+  margin: 0px 10px;
+}
+.button-redirect-login a {
+  color: white;
+  text-decoration: none;
+}

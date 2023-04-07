@@ -1,0 +1,75 @@
+﻿@using InventoryManager.Application.Services
+@using InventoryManager.Domain.Entities
+<div class="container text-center">
+    <div class="row">
+        <div class="col-4 container-button-add">
+            <a href="log/registry">
+                <button type="button" class="btn btn-primary">Make transaction</button>
+            </a>
+        </div>
+        <div class="col-4 container-button-add">
+            <a href="product/list">
+                <button type="button" class="btn btn-success">Add Product</button>
+            </a>
+        </div>
+        <div class="col-4">
+            <select class="form-select" @onchange="@CategoryChanged">
+                <option value="">Select a category</option>
+                @foreach (var category in _categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover table-bordered main-table-products">
+    <thead>
+        <tr>
+            <th>Reference</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in _temporalProducts)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.TotalQuantity</td>
+                <td>@product.Category!.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@inject ProductService ProductService
+@inject CategoryService CategoryService;
+
+@code {
+    private List<Product> _products = new();
+    //Para cargar temporalmente los productos
+    private List<Product> _temporalProducts = new();
+    private List<Category> _categories = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Se traen productos y categorias
+        _products = await ProductService.ItemList();
+        _temporalProducts = _products;
+        _categories = await CategoryService.ItemList();
+    }
+
+    //ChangeEventArgs me trae el valor del evento que captura el formulario
+    private void CategoryChanged(ChangeEventArgs e)
+    {
+        _temporalProducts = _products.Where(p => p.CategoryId == e.Value!.ToString()).ToList();
+    }
+
+}

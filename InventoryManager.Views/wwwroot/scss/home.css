@@ -1,0 +1,47 @@
+﻿@charset "UTF-8";
+﻿ html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.main-row-home {
+  height: 100vh;
+  width: 100vw;
+}
+.main-row-home div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-row-home div div h4 {
+  font-size: 1.5rem;
+  margin: 20px 0px 0px 50px;
+  font-size: 1.375rem;
+}
+.main-row-home div div div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 50px;
+}
+.main-row-home div div div button {
+  width: 400px;
+  height: 50px;
+}
+.main-row-home div div div button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.main-row-home .home-image {
+  border-radius: 50%;
+  opacity: 0.8;
+  padding-bottom: 100px;
+}

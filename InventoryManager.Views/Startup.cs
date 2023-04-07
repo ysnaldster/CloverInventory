@@ -24,7 +24,6 @@ public class Startup
         services.AddScoped<ProtectedSessionStorage>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
         services.AddScoped<UserService>();
-        services.AddControllers();
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 

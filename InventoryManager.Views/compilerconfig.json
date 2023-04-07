@@ -10,5 +10,13 @@
   {
     "outputFile": "wwwroot/scss/main.css",
     "inputFile": "wwwroot/scss/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/home.css",
+    "inputFile": "wwwroot/scss/home.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/footer.css",
+    "inputFile": "wwwroot/scss/footer.scss"
   }
 ]
