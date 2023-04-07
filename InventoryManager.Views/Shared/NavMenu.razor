@@ -24,4 +24,16 @@
       </ul>
     </div>
   </div>
+   <AuthorizeView Roles="Administrator,User">
+      <Authorized>
+          <p>Eres un administrador o un usuario normal</p>
+      </Authorized>
+  </AuthorizeView>
+
+  <AuthorizeView Roles="Administrator">
+      <Authorized>
+          <p>Eres un administrador</p>
+      </Authorized>
+  </AuthorizeView>
+
 </nav>

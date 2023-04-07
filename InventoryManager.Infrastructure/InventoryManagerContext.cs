@@ -89,10 +89,11 @@ namespace InventoryManager.Infrastructure
             {
                 user.ToTable("user");
                 user.HasKey(t => t.Id);
-                user.Property(p => p.Username).IsRequired().HasMaxLength(50).HasColumnName("Username");
-                user.HasIndex(p => p.Username).IsUnique();
+                user.Property(p => p.UserName).IsRequired().HasMaxLength(50).HasColumnName("Username");
+                user.HasIndex(p => p.UserName).IsUnique();
                 user.Property(p => p.Password).IsRequired().HasColumnName("Password");
                 user.Property(p => p.Email).IsRequired().HasColumnName("Email");
+                user.Property(p => p.Role).IsRequired().HasColumnName("Role");
                 user.Property(p => p.CreationDate).HasColumnName("CreationDate").HasDefaultValue(DateTime.Now);
                 user.Property(p => p.UpdateDate).HasColumnName("UpdateDate").HasDefaultValue(DateTime.Now);
 

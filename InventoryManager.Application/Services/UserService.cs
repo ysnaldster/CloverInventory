@@ -1,4 +1,5 @@
-﻿using InventoryManager.Infrastructure;
+﻿using InventoryManager.Domain.Entities;
+using InventoryManager.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,26 @@ namespace InventoryManager.Application.Services
             _inventoryManagerContext = inventoryManagerContext;
         }
 
-        public bool IsUser(string username, string password)
+        public List<User> users = new List<User>
         {
-            return _inventoryManagerContext.Users.Where(p => p.Username == username && p.Password == password).Any();
-        }
+            new()
+            {
+                UserName = "admin",
+                Password = "admin",
+                Role = "Administrator"
+            },
+            new()
+            {
+                UserName = "user",
+                Password = "user",
+                Role = "User"
+            }
+        };
+        
+        public User? GetUserByUserName(string? username)
+        {
+            return _inventoryManagerContext.Users.FirstOrDefault(p => p.UserName == username);   
+        } 
             
     }
 }

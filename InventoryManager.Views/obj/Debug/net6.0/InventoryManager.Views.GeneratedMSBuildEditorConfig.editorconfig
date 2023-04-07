@@ -20,24 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Login/LoginComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMb2dpblxMb2dpbkNvbXBvbmVudC5yYXpvcg==
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/ListProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XExpc3RQcm9kdWN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/CustomPages/LoginPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tUGFnZXNcTG9naW5QYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/CustomPages/Product/ListProductPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tUGFnZXNcUHJvZHVjdFxMaXN0UHJvZHVjdFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Shared/SurveyPrompt.razor]

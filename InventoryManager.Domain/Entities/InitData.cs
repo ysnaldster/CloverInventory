@@ -140,16 +140,18 @@ namespace InventoryManager.Domain.Entities
                 new()
                 {
                     Id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7f88",
-                    Username = "John",
+                    UserName = "John",
                     Password = "123456",
-                    Email = "john@mail.com"
+                    Email = "john@mail.com",
+                    Role = "Administrator"
                 },
                 new ()
                 {
                     Id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7f99",
-                    Username = "Fabiana",
+                    UserName = "Fabiana",
                     Password = "123456",
-                    Email = "fabiana@mail.com"
+                    Email = "fabiana@mail.com",
+                    Role = "User"
                 }
             };
             return users;

@@ -1,5 +1,8 @@
 ﻿using InventoryManager.Application.Services;
 using InventoryManager.Infrastructure;
+using InventoryManager.Views.Authentication;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 
 public class Startup
 {
@@ -10,21 +13,21 @@ public class Startup
 
     public IConfiguration Configuration { get; }
 
-    // This method gets called by the runtime. Use this method to add services to the container.
-    // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddAuthenticationCore();
         services.AddRazorPages();
         services.AddServerSideBlazor();
-        //var connectionString =
-          // "User ID=postgres;Password=admin;Host=localhost;Port=5432;Database=inventory_db;";
-        //services.AddNpgsql<InventoryManagerContext>(connectionString);
-        //services.AddScoped<UserService>();
-  
+        var connectionString =
+           "User ID=postgres;Password=admin;Host=localhost;Port=5432;Database=inventory_db;";
+        services.AddNpgsql<InventoryManagerContext>(connectionString);
+        services.AddScoped<ProtectedSessionStorage>();
+        services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+        services.AddScoped<UserService>();
+        services.AddControllers();
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
@@ -34,7 +37,6 @@ public class Startup
         else
         {
             app.UseExceptionHandler("/Error");
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
 
@@ -49,8 +51,8 @@ public class Startup
             endpoints.MapFallbackToPage("/_Host");
         });
 
-        //using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()!.CreateScope();
-        //var context = serviceScope.ServiceProvider.GetRequiredService<InventoryManagerContext>();
-        //context.Database.EnsureCreated();
+        using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()!.CreateScope();
+        var context = serviceScope.ServiceProvider.GetRequiredService<InventoryManagerContext>();
+        context.Database.EnsureCreated();
     }
 }

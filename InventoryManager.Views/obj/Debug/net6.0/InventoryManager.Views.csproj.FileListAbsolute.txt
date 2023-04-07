@@ -79,3 +79,13 @@ C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\D
 C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\InventoryManager.Domain.pdb
 C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\InventoryManager.Infrastructure.pdb
 C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\obj\Debug\net6.0\InventoryManager.Views.csproj.CopyComplete
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
