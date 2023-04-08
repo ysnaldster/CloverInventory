@@ -1,9 +1,4 @@
-﻿
-@mixin displayFlex($justify-content: center) {
-    display: flex;
-    justify-content: $justify-content;
-    align-items: center;
-}
+﻿@import 'main';
 ﻿
 html, body {
     overflow: hidden;
@@ -11,46 +6,32 @@ html, body {
     height: 100%;
 }
 
-.container-fluid {
-    height: 100%;
-    box-sizing: border-box;
-}
 
-.main-row-home {
+.parent-home-container {
     height: 100vh;
     width: 100vw;
-
-    .home-main-container {
-        @include displayFlex();
+    .main-container {
+        @include displayFlexbox();
 
         div {
             h4 {
-                color: #8a8e96;
-                margin: 0px;
+                color: $main-grey;
             }
 
             div {
-                @include displayFlex($justify-content: left);
-                margin: 50px;
+                @include displayFlexbox($justify-content: left);
 
                 button {
                     width: 400px;
                     height: 50px;
-
                     a {
-                        text-decoration: none;
-                        color: white;
-                        font-weight: bold;
+                        @include displayTags();
                     }
                 }
             }
         }
     }
-
-    .min-container-button{
-        margin: 20px 0px !important;
-    } 
-    .home-image {
+    .img {
         border-radius: 50%;
         opacity: 0.8;
         padding-bottom: 100px;

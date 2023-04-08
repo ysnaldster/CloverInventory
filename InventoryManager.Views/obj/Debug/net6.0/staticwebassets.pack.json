@@ -53,6 +53,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\_test.css",
+      "PackagePath": "staticwebassets\\scss\\_test.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\_test.min.css",
+      "PackagePath": "staticwebassets\\scss\\_test.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\_test.scss",
+      "PackagePath": "staticwebassets\\scss\\_test.scss"
+    },
+    {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\footer.css",
       "PackagePath": "staticwebassets\\scss\\footer.css"
     },

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,12 +89,12 @@ namespace InventoryManager.Infrastructure
             modelBuilder.Entity<User>(user =>
             {
                 user.ToTable("user");
-                user.HasKey(t => t.Id);
+                user.HasKey(p => p.Id);
                 user.Property(p => p.UserName).IsRequired().HasMaxLength(50).HasColumnName("Username");
                 user.HasIndex(p => p.UserName).IsUnique();
                 user.Property(p => p.Password).IsRequired().HasColumnName("Password");
                 user.Property(p => p.Email).IsRequired().HasColumnName("Email");
-                user.Property(p => p.Role).IsRequired().HasColumnName("Role");
+                user.Property(p => p.Role).IsRequired().HasColumnName("Role").HasDefaultValue("User");
                 user.Property(p => p.CreationDate).HasColumnName("CreationDate").HasDefaultValue(DateTime.Now);
                 user.Property(p => p.UpdateDate).HasColumnName("UpdateDate").HasDefaultValue(DateTime.Now);
 

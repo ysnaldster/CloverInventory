@@ -12,7 +12,7 @@ namespace InventoryManager.Application.Services
 {
     public class ProductService : IGenericRestRepository<Product>
     {
-        private readonly InventoryManagerContext _context;
+        private readonly InventoryManagerContext? _context;
 
         public ProductService(InventoryManagerContext dbContext)
         {
@@ -23,7 +23,7 @@ namespace InventoryManager.Application.Services
 
         public async Task<List<Product>> ItemList()
         {
-            return await _context.Products
+            return await _context!.Products!
                 .Include(p => p.Category)
                 .AsNoTracking()
                 .ToListAsync();
@@ -31,20 +31,20 @@ namespace InventoryManager.Application.Services
 
         public async Task<Product> FindItem(string id)
         {
-            return (await _context.Products.SingleOrDefaultAsync(p => p.Id == id))!;
+            return (await _context!.Products!.SingleOrDefaultAsync(p => p.Id == id))!;
         }
 
         public async Task CreateItem(Product? product)
         {
             if (product == null) throw new ArgumentNullException(nameof(product));
-            await _context.AddAsync(product);
+            await _context!.AddAsync(product);
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateItem(Product? product)
         {
             if (product == null) throw new ArgumentNullException(nameof(product));
-            var actualProduct = await _context.Products.SingleOrDefaultAsync(p => p.Id == product.Id);
+            var actualProduct = await _context!.Products!.SingleOrDefaultAsync(p => p.Id == product.Id);
             actualProduct!.Name = product.Name;
             actualProduct!.Description = product.Description;
             actualProduct!.TotalQuantity = product.TotalQuantity;
@@ -53,7 +53,7 @@ namespace InventoryManager.Application.Services
 
         public async Task DeleteItem(Product? product)
         {
-            var productToDelete = await _context.Products
+            var productToDelete = await _context!.Products!
                 .Where(s => s.Id == product!.Id)
                 .SingleOrDefaultAsync();
             _context.Remove(productToDelete!);

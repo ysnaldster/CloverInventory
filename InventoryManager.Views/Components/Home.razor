@@ -1,30 +1,25 @@
 ﻿<div class="container-fluid">
-    <div class="row main-row-home">
-        <div class="col-5 main-titles-1 home-main-container">
+    <div class="row parent-home-container">
+        <div class="col-5 main-titles-1 main-container">
             <div class="row">
-                <h1>
                     <AuthorizeView>
                         <Authorized>
-                            <h1>Hello, @context.User.Identity.Name!</h1>
+                            <h1>Hello, @context.User!.Identity!.Name!</h1>
                         </Authorized>
                         <NotAuthorized>
                             <h1>Welcome to 
                                 <br />
                                 Clover Inventory</h1>
-                        <p></p>
                         </NotAuthorized>
                     </AuthorizeView>
-                </h1>
-                <h4 class="warehouse-welcome-title">
+                <h4 class="m-0">
                     A modern warehouse 
                     management tool
                 </h4>
-                <div class="min-container-button">
-                    <button type="button" class="btn btn-success button-explore-products">
-                        <a href="product">
-                            Explore products
-                        </a>
-                     </button>
+                <div class="min-container-button m-5">
+                    <a href="product" class="button btn btn-success button-explore-products">
+                        Explore products
+                    </a>
                 </div>
             </div>
         </div>

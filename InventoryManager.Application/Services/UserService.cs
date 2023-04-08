@@ -1,4 +1,5 @@
 ﻿using InventoryManager.Domain.Entities;
+using InventoryManager.Domain.Repositories;
 using InventoryManager.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,19 +10,42 @@ using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
-    public class UserService 
+    public class UserService : IGenericRestRepository<User>
     {
-        private readonly InventoryManagerContext? _inventoryManagerContext;
+        private readonly InventoryManagerContext? _context;
 
         public UserService(InventoryManagerContext inventoryManagerContext)
         {
-            _inventoryManagerContext = inventoryManagerContext;
+            _context = inventoryManagerContext;
         }
- 
-        public User? GetUserByUserName(string? username)
+
+        public async Task<User?> GetUserByUserName(string? username)
         {
-            return _inventoryManagerContext.Users.FirstOrDefault(p => p.UserName == username);   
-        } 
-            
+            return await _context!.Users!.FirstOrDefaultAsync(p => p.UserName == username);
+        }
+
+        public async Task<List<User>> ItemList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task CreateItem(User? user)
+        {
+            if (user == null) throw new ArgumentNullException(nameof(user));
+            user.Id = new Guid().ToString();
+            user.Role = "User";
+            await _context!.AddAsync(user);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteItem(User? user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task UpdateItem(User? user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

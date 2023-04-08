@@ -4,3 +4,25 @@ $main-blue: #68D4F2;
 $main-green: #6EE6BE;
 $secondary-green: #6DFCA4;
 $tertiary-green: #68F276;
+$main-grey: #8a8e96;
+
+
+//Clase principal para el display flex para centrar contenedores.
+//Mixin para centrar clases main-container
+@mixin displayFlexbox($justify-content: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}
+
+//Mixin para dar estilos a todas las anclas o tags de html
+@mixin displayTags() {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@mixin displayWithHeightSettings($height: auto, $width: auto) {
+    height: $height;
+    width: $width:;
+}

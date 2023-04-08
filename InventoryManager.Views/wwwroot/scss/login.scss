@@ -23,3 +23,16 @@
     opacity: 0.8;
     padding-bottom: 100px;
 }
+
+.form-registry-container {
+    padding: 20px 500px !important;
+    opacity: 1.0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: #8a8e96;
+        margin: 0px;
+    }
+}

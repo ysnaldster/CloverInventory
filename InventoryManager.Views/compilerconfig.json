@@ -26,5 +26,13 @@
   {
     "outputFile": "wwwroot/scss/login.css",
     "inputFile": "wwwroot/scss/login.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/_main.css",
+    "inputFile": "wwwroot/scss/_main.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/_test.css",
+    "inputFile": "wwwroot/scss/_test.scss"
   }
 ]

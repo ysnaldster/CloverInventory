@@ -1,7 +1,8 @@
 ﻿@page "/login"
-@using InventoryManager.Application.Services;
 @using InventoryManager.Domain.Entities;
 @using InventoryManager.Views.Authentication;
+@using InventoryManager.Application.Services;
+
 @inject IJSRuntime js
 @inject UserService UserService
 @inject AuthenticationStateProvider authStateProvider
@@ -41,15 +42,15 @@
 </div>
 
 @code {
-   
+
     private User user = new ();
     /// <summary>
     /// Validate user authentication state by entrance to the app.
     /// </summary>
     private async Task Authenticate()
     {
-        var userAccount = UserService.GetUserByUserName(user.UserName);
-        
+        User? userAccount = (User?) await UserService!.GetUserByUserName(user.UserName);
+
         if (userAccount == null || userAccount.Password != user.Password)
         {
             await js.InvokeVoidAsync("alert", "Invalid UserName or Password");

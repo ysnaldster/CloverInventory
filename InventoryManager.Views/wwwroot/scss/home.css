@@ -6,43 +6,33 @@ body {
   height: 100%;
 }
 
-.container-fluid {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.main-row-home {
+.parent-home-container {
   height: 100vh;
   width: 100vw;
 }
-.main-row-home .home-main-container {
+.parent-home-container .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-row-home .home-main-container div h4 {
+.parent-home-container .main-container div h4 {
   color: #8a8e96;
-  margin: 0px;
 }
-.main-row-home .home-main-container div div {
+.parent-home-container .main-container div div {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin: 50px;
 }
-.main-row-home .home-main-container div div button {
+.parent-home-container .main-container div div button {
   width: 400px;
   height: 50px;
 }
-.main-row-home .home-main-container div div button a {
+.parent-home-container .main-container div div button a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
-.main-row-home .min-container-button {
-  margin: 20px 0px !important;
-}
-.main-row-home .home-image {
+.parent-home-container .img {
   border-radius: 50%;
   opacity: 0.8;
   padding-bottom: 100px;
