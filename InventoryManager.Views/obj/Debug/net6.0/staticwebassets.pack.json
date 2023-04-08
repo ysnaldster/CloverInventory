@@ -77,6 +77,18 @@
       "PackagePath": "staticwebassets\\scss\\home.scss"
     },
     {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\login.css",
+      "PackagePath": "staticwebassets\\scss\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\login.min.css",
+      "PackagePath": "staticwebassets\\scss\\login.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\login.scss",
+      "PackagePath": "staticwebassets\\scss\\login.scss"
+    },
+    {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\main.css",
       "PackagePath": "staticwebassets\\scss\\main.css"
     },

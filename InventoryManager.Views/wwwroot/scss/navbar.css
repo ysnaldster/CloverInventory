@@ -14,3 +14,10 @@ svg {
   color: white;
   text-decoration: none;
 }
+
+.info-alert-unauthorized {
+  margin: 20px 0px;
+}
+.info-alert-unauthorized svg {
+  color: blue;
+}

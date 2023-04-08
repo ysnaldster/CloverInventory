@@ -15,30 +15,32 @@ body {
   height: 100vh;
   width: 100vw;
 }
-.main-row-home div {
+.main-row-home .home-main-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-row-home div div h4 {
-  font-size: 1.5rem;
-  margin: 20px 0px 0px 50px;
-  font-size: 1.375rem;
+.main-row-home .home-main-container div h4 {
+  color: #8a8e96;
+  margin: 0px;
 }
-.main-row-home div div div {
+.main-row-home .home-main-container div div {
   display: flex;
   justify-content: left;
   align-items: center;
   margin: 50px;
 }
-.main-row-home div div div button {
+.main-row-home .home-main-container div div button {
   width: 400px;
   height: 50px;
 }
-.main-row-home div div div button a {
+.main-row-home .home-main-container div div button a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+.main-row-home .min-container-button {
+  margin: 20px 0px !important;
 }
 .main-row-home .home-image {
   border-radius: 50%;

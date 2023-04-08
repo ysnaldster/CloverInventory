@@ -1,6 +1,55 @@
-﻿@attribute [Authorize(Roles = "Administrator")]
+﻿@using InventoryManager.Application.Services;
+@using InventoryManager.Domain.Entities
+@attribute [Authorize(Roles = "Administrator")]
 
+<div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+            <div class="main-container-form-create">
+                <EditForm Model="_product">
+                    <div class="form-group">
+                        <label>Reference:</label>
+                        <InputText @bind-Value="_product.Id" class="form-control"></InputText>
+                    </div>
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <InputText @bind-Value="_product.Name" class="form-control"></InputText>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <InputText @bind-Value="_product.Description" class="form-control"></InputText>
+                    </div>
+                    <div class="form-group">
+                        <label>Category:</label>
+                    
+                    </div>
+                </EditForm>
+            </div>
+     </div>
+     <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" @onclick="SaveProduct">Add Product</button>
+     </div>
+</div>
+</div>
 
+@inject ProductService ProductService;
+@inject CategoryService CategoryService;
 @code {
-   
+    private Product _product = new();
+    private List<Category> _categories = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //_categories = await CategoryService.ItemList();
+    }
+
+    private async void SaveProduct()
+    {
+        await ProductService.CreateItem(_product);
+    }
 }

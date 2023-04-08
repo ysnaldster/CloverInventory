@@ -1,15 +1,31 @@
 ﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
+
+<AuthorizeView>
+     <NotAuthorized>
+          <InfoAlertProduct></InfoAlertProduct>
+     </NotAuthorized>
+</AuthorizeView>
 <div class="container m-0 pt-3 pb-3">
     <div class="row">
         <AuthorizeView Roles="Administrator">
             <Authorized>
             <div class="col-4 container-button-add">
-                <a href="log/registry" class="button btn btn-primary">Make Transaction</a>
+                    <button type="button" class="button btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Make transaction
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">            
+                       
+                    </div>
             </div>
-            <div class="col-4 container-button-add">
-                <a href="product/list" class="button btn btn-success">Add Product</a>
-            </div>
+                <div class="col-4 container-button-add">
+                    <button type="button" class="button btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add product
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <CreateProduct></CreateProduct>
+                    </div>
+                </div>
             </Authorized>
         </AuthorizeView>
         <div class="col-4 p-0">
@@ -48,18 +64,16 @@
     </tbody>
 </table>
 
-@message
 
 @inject ProductService ProductService
 @inject CategoryService CategoryService;
 
 @code {
+
     private List<Product> _products = new();
     //Para cargar temporalmente los productos
     private List<Product> _temporalProducts = new();
-    private List<Category> _categories = new();
-
-    string? message;
+    public List<Category> _categories = new();
 
     protected override async Task OnInitializedAsync()
     {
