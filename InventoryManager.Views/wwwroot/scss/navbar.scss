@@ -1,37 +1,28 @@
-﻿//Colors
-$main-black: #193B39;
-$main-blue: #68D4F2;
-$main-green: #6EE6BE;
-$secondary-green: #6DFCA4;
-$tertiary-green: #68F276;
+﻿@import 'main';
 
-.navbar-nav
-{
-    li
-        {
-        a
-            {
-            color: $main-black !important;
+.navbar-main-container {
+    padding: 0px 48px !important;
+
+    svg {
+        color: $main-green;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        color: $main-black;
+    }
+
+    .navbar-nav {
+        li {
+            a {
+                color: $main-black;
+            }
         }
     }
 }
 
-svg {
-    margin: 0px 20px;
-    color: $main-green;
-}
-
-.button-redirect{
-    margin: 0px 10px;
-    a{
-        color: white;
-        text-decoration: none;
-    }
-}
-
-.info-alert-unauthorized{
-    margin: 20px 0px;
-    svg{
-        color: blue;
+.button-nav-container {
+    a {
+        @include displayTags();
     }
 }

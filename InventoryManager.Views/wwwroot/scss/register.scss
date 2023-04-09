@@ -1,0 +1,23 @@
+﻿@import 'main';
+
+.form-registry-container {
+    @include displayFlexbox();
+    padding: 0px 500px;
+
+    .row {
+        background-color: white;
+    }
+
+    p {
+        color: #8a8e96;
+        margin: 0px;
+    }
+
+    .password-restriccions-container{
+        color: $main-grey;
+    }
+
+    button {
+        width: 60%;
+    }
+}

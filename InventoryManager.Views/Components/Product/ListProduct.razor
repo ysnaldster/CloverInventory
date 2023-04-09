@@ -1,16 +1,15 @@
 ﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
+@inject ProductService ProductService
+@inject CategoryService CategoryService;
 
-<AuthorizeView>
-     <NotAuthorized>
-          <InfoAlertProduct></InfoAlertProduct>
-     </NotAuthorized>
-</AuthorizeView>
-<div class="container m-0 pt-3 pb-3">
-    <div class="row">
+
+<div class="container-fluid m-0 pt-3 pb-3">
+    <div class="row list-products-sub-container">
+        <h1 class="p-0">Available products</h1>
         <AuthorizeView Roles="Administrator">
             <Authorized>
-            <div class="col-4 container-button-add">
+            <div class="col-4 p-0">
                     <button type="button" class="button btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Make transaction
                     </button>
@@ -18,7 +17,7 @@
                        
                     </div>
             </div>
-                <div class="col-4 container-button-add">
+                <div class="col-4">
                     <button type="button" class="button btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Add product
                     </button>
@@ -27,8 +26,11 @@
                     </div>
                 </div>
             </Authorized>
+            <NotAuthorized>
+                <InfoAlertProduct></InfoAlertProduct>
+            </NotAuthorized>
         </AuthorizeView>
-        <div class="col-4 p-0">
+        <div class="col-4 pb-4 pe-0 ps-0">
             <select class="form-select" @onchange="@CategoryChanged">
                 <option value="">Select a category</option>
                 @foreach (var category in _categories)
@@ -38,35 +40,32 @@
             </select>
         </div>
     </div>
+    <div class="row list-products-sub-container">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Reference</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in _temporalProducts)
+                {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td>@product.Name</td>
+                        <td>@product.Description</td>
+                        <td>@product.TotalQuantity</td>
+                        <td>@product.Category!.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
-
-<table class="table table-hover table-bordered main-table-products">
-    <thead>
-        <tr>
-            <th>Reference</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Quantity</th>
-            <th>Category</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var product in _temporalProducts)
-        {
-            <tr>
-                <td>@product.Id</td>
-                <td>@product.Name</td>
-                <td>@product.Description</td>
-                <td>@product.TotalQuantity</td>
-                <td>@product.Category!.Name</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-
-@inject ProductService ProductService
-@inject CategoryService CategoryService;
 
 @code {
 

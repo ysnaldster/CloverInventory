@@ -1,23 +1,27 @@
-﻿.navbar-nav li a {
-  color: #193B39 !important;
+﻿@charset "UTF-8";
+﻿ html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
 }
 
-svg {
-  margin: 0px 20px;
-  color: #6EE6BE;
+.navbar-main-container {
+  padding: 0px 48px !important;
+}
+.navbar-main-container svg {
+  color: #349977;
+}
+.navbar-main-container .navbar-brand {
+  font-weight: bold;
+  color: #193B39;
+}
+.navbar-main-container .navbar-nav li a {
+  color: #193B39;
 }
 
-.button-redirect {
-  margin: 0px 10px;
-}
-.button-redirect a {
-  color: white;
+.button-nav-container a {
   text-decoration: none;
-}
-
-.info-alert-unauthorized {
-  margin: 20px 0px;
-}
-.info-alert-unauthorized svg {
-  color: blue;
+  color: white;
+  font-weight: bold;
 }

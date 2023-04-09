@@ -1,37 +1,30 @@
-﻿.login-titles-container {
-  display: block;
-  padding: 127px 0px;
-}
-
-.welcome-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-main-container {
-  padding-right: 150px !important;
-}
-
-.button-send-login {
-  width: 100%;
-}
-
-.login-image {
-  width: 100%;
+﻿@charset "UTF-8";
+﻿ html,
+body {
+  overflow: hidden;
+  margin: 0;
   height: 100%;
-  opacity: 0.8;
-  padding-bottom: 100px;
 }
 
-.form-registry-container {
-  padding: 20px 500px !important;
-  opacity: 1;
+.container-fluid .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.form-registry-container p {
-  color: #8a8e96;
-  margin: 0px;
+.container-fluid .login-container .title-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid .login-container .form-main-container {
+  padding-right: 150px;
+}
+.container-fluid .login-container button {
+  height: auto;
+  width: 100%;
+}
+.container-fluid img {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.8;
 }

@@ -8,15 +8,18 @@
 
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\scss\product.scss" />
   </ItemGroup>
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="compilerconfig.json" />
     <_ContentIncludedByDefault Remove="wwwroot\scss\navbar.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\scss\product.scss" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <None Include="wwwroot\scss\product.scss" />
   </ItemGroup>
 
   <ItemGroup>

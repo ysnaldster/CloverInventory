@@ -53,18 +53,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\_test.css",
-      "PackagePath": "staticwebassets\\scss\\_test.css"
-    },
-    {
-      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\_test.min.css",
-      "PackagePath": "staticwebassets\\scss\\_test.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\_test.scss",
-      "PackagePath": "staticwebassets\\scss\\_test.scss"
-    },
-    {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\footer.css",
       "PackagePath": "staticwebassets\\scss\\footer.css"
     },
@@ -123,6 +111,26 @@
     {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\navbar.scss",
       "PackagePath": "staticwebassets\\scss\\navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\product.css",
+      "PackagePath": "staticwebassets\\scss\\product.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\product.min.css",
+      "PackagePath": "staticwebassets\\scss\\product.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\register.css",
+      "PackagePath": "staticwebassets\\scss\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\register.min.css",
+      "PackagePath": "staticwebassets\\scss\\register.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\register.scss",
+      "PackagePath": "staticwebassets\\scss\\register.scss"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.InventoryManager.Views.Microsoft.AspNetCore.StaticWebAssets.props",

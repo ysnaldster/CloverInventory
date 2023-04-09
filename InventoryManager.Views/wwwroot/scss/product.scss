@@ -1,0 +1,16 @@
+﻿@import 'main';
+
+.container-fluid {
+    .list-products-sub-container {
+        margin-left: 40px;
+        margin-right: 8px;
+
+        h1 {
+            color: $main-green;
+        }
+
+        .informative-alert-container {
+            @include displayWithHeightSettings();
+        }
+    }
+}

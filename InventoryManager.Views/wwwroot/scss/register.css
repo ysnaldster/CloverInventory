@@ -1,0 +1,27 @@
+﻿@charset "UTF-8";
+﻿ html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+.form-registry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 500px;
+}
+.form-registry-container .row {
+  background-color: white;
+}
+.form-registry-container p {
+  color: #8a8e96;
+  margin: 0px;
+}
+.form-registry-container .password-restriccions-container {
+  color: #8a8e96;
+}
+.form-registry-container button {
+  width: 60%;
+}

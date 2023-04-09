@@ -1,43 +1,49 @@
 ﻿@import 'main';
-﻿
-html, body {
-    overflow: hidden;
-    margin: 0;
-    height: 100%;
-}
-
 
 .parent-home-container {
-    height: 100vh;
-    width: 100vw;
+    @include displayWithHeightSettings($height: 100vh, $width: 100vw);
+
     .main-container {
         @include displayFlexbox();
 
-        div {
-            h4 {
-                color: $main-grey;
-            }
+        .title-home-container {
+            @include displayFlexbox($justify-content: initial);
+        }
 
-            div {
-                @include displayFlexbox($justify-content: left);
+        label, h3 {
+            font-size: 25px;
+            font-weight: bold;
+            color: $main-green;
+        }
 
-                button {
-                    width: 400px;
-                    height: 50px;
-                    a {
-                        @include displayTags();
-                    }
-                }
+        h4 {
+            color: $main-grey;
+        }
+
+        .button-container {
+            a {
+                @include displayTags();
+                @include displayWithHeightSettings($height: 100%, $width: 80%);
             }
         }
+
+        p {
+            color: $main-grey;
+            font-size: 18px;
+            font-weight: bold;
+        }
     }
-    .img {
-        border-radius: 50%;
-        opacity: 0.8;
-        padding-bottom: 100px;
+
+    .image-container {
+        @include displayFlexbox();
+
+        img {
+            @include displayWithHeightSettings($height: 100vh, $width: 100%);
+            filter: grayscale(100%);
+            padding-bottom: 120px;
+            padding-top: 50px;
+            border-radius: 100%;
+            opacity: 0.8;
+        }
     }
 }
-
-
-
-
