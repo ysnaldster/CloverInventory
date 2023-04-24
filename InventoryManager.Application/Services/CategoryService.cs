@@ -21,8 +21,7 @@ namespace InventoryManager.Application.Services
 
         public async Task<List<Category>> ItemList()
         {
-            return await _context!.Categories!.AsNoTracking()
-                .ToListAsync();
+            return await _context!.Categories!.AsNoTracking().ToListAsync();
         }
 
         public async Task CreateItem(Category? category)

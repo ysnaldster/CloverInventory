@@ -23,10 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Components\Category\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5" />
     <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
   </ItemGroup>
@@ -35,6 +31,10 @@
     <ProjectReference Include="..\InventoryManager.Application\InventoryManager.Application.csproj" />
     <ProjectReference Include="..\InventoryManager.Domain\InventoryManager.Domain.csproj" />
     <ProjectReference Include="..\InventoryManager.Infrastructure\InventoryManager.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\Category\" />
   </ItemGroup>
 
 </Project>

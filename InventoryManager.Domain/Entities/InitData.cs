@@ -8,19 +8,20 @@ namespace InventoryManager.Domain.Entities
 {
     public abstract class InitData
     {
+        
         public static List<Warehouse> LoadWineries()
         {
             var wineries = new List<Warehouse>
         {
             new()
             {
-                Id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fbb",
+                Id = 86348,
                 Name = "Inveterate",
                 Address = "simply dummy text of the printing and typesetting industry",
             },
             new()
             {
-                Id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fcc",
+                Id = 86349,
                 Name = "The Dilston",
                 Address = "simply dummy text of the printing and typesetting industry",
 
@@ -35,12 +36,12 @@ namespace InventoryManager.Domain.Entities
         {
             new()
             {
-                Id = "e97de533-9e22-4944-92bc-bdd799b6c785",
+                Id = 72206,
                 Name = "Sales"
             },
             new()
             {
-                Id = "e97de533-9e22-4944-92bc-bdd799b6c786",
+                Id = 72207,
                 Name = "Distribution"
             }
         };
@@ -53,16 +54,16 @@ namespace InventoryManager.Domain.Entities
         {
             new()
             {
-                Id = "3ee05129-86e3-4fe3-ac97-23510c79d1f6",
-                CategoryId = "e97de533-9e22-4944-92bc-bdd799b6c785",
+                Id = 66255,
+                CategoryId = 72206,
                 Name = "Coca-Cola",
                 Description = "simply dummy text of the printing and typesetting industry",
                 TotalQuantity = 10
             },
             new()
             {
-                Id = "3ee05129-86e3-4fe3-ac97-23510c79d1f7",
-                CategoryId = "e97de533-9e22-4944-92bc-bdd799b6c786",
+                Id = 66256,
+                CategoryId = 72207,
                 Name = "Frescolita",
                 Description = "simply dummy text of the printing and typesetting industry",
                 TotalQuantity = 15
@@ -77,16 +78,16 @@ namespace InventoryManager.Domain.Entities
         {
             new()
             {
-                Id = "b7d0bbf0-a1e9-4dbd-845b-f8e751160000",
-                ProductId = "3ee05129-86e3-4fe3-ac97-23510c79d1f6",
-                WarehouseId = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fbb",
+                Id = 91202,
+                ProductId = 66255,
+                WarehouseId = 86348,
                 PartialQuantity = 4
             },
             new()
             {
-                Id = "b7d0bbf0-a1e9-4dbd-845b-f8e751160001",
-                ProductId = "3ee05129-86e3-4fe3-ac97-23510c79d1f7",
-                WarehouseId = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fcc",
+                Id = 91203,
+                ProductId = 66256,
+                WarehouseId = 86349,
                 PartialQuantity = 2
             }
         };
@@ -99,14 +100,14 @@ namespace InventoryManager.Domain.Entities
         {
             new()
             {
-                Id = "f4670c53-544a-40b7-8fc3-e772edd31725",
-                StorageId = "b7d0bbf0-a1e9-4dbd-845b-f8e751160000",
+                Id = 69044,
+                StorageId = 91202,
                 Quantity = 3
             },
             new()
             {
-                Id = "f4670c53-544a-40b7-8fc3-e772edd31726",
-                StorageId = "b7d0bbf0-a1e9-4dbd-845b-f8e751160001",
+                Id = 69045,
+                StorageId = 91203,
                 Quantity = 2
             }
         };
@@ -119,15 +120,15 @@ namespace InventoryManager.Domain.Entities
             {
                 new()
                 {
-                     Id = "f4670c53-544a-40b7-8fc3-e772edd31730",
-                     ProductId = "3ee05129-86e3-4fe3-ac97-23510c79d1f6",
-                     UserId = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7f88"
+                     Id = 83976,
+                     ProductId = 66255,
+                     UserId = 4078
                 },
                 new ()
                 {
-                     Id = "f4670c53-544a-40b7-8fc3-e772edd31731",
-                     ProductId = "3ee05129-86e3-4fe3-ac97-23510c79d1f7",
-                     UserId = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7f99"
+                     Id = 83977,
+                     ProductId = 66256,
+                     UserId = 4079
                 }
             };
             return productUser;
@@ -139,7 +140,7 @@ namespace InventoryManager.Domain.Entities
             {
                 new()
                 {
-                    Id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7f88",
+                    Id = 4078,
                     UserName = "John",
                     Password = "123456",
                     Email = "john@mail.com",
@@ -147,7 +148,7 @@ namespace InventoryManager.Domain.Entities
                 },
                 new ()
                 {
-                    Id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7f99",
+                    Id = 4079,
                     UserName = "Fabiana",
                     Password = "123456",
                     Email = "fabiana@mail.com",

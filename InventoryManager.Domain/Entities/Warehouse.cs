@@ -9,7 +9,7 @@ namespace InventoryManager.Domain.Entities
 {
     public class Warehouse
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
 

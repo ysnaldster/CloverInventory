@@ -9,9 +9,9 @@ namespace InventoryManager.Domain.Entities
 {
     public class Storage
     {
-        public string? Id { get; set; }
-        public string? ProductId { get; set; }
-        public string? WarehouseId { get; set; }
+        public int? Id { get; set; }
+        public int? ProductId { get; set; }
+        public int? WarehouseId { get; set; }
         public DateTime? UpdateDate { get; set; }
         public DateTime? CreationDate { get; set; }
         public int? PartialQuantity { get; set; }

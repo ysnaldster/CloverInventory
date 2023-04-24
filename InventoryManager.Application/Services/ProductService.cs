@@ -21,6 +21,7 @@ namespace InventoryManager.Application.Services
 
         public ProductService() { }
 
+     
         public async Task<List<Product>> ItemList()
         {
             return await _context!.Products!
@@ -29,7 +30,7 @@ namespace InventoryManager.Application.Services
                 .ToListAsync();
         }
 
-        public async Task<Product> FindItem(string id)
+        public async Task<Product> FindItem(int id)
         {
             return (await _context!.Products!.SingleOrDefaultAsync(p => p.Id == id))!;
         }

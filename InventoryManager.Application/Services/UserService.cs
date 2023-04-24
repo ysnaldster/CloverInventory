@@ -31,8 +31,9 @@ namespace InventoryManager.Application.Services
 
         public async Task CreateItem(User? user)
         {
+            Random rnd = new Random();
             if (user == null) throw new ArgumentNullException(nameof(user));
-            user.Id = new Guid().ToString();
+            user.Id = rnd.Next(10000);
             user.Role = "User";
             await _context!.AddAsync(user);
             await _context.SaveChangesAsync();

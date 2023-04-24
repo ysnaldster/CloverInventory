@@ -8,8 +8,8 @@ namespace InventoryManager.Domain.Entities
 {
     public class TransactionLog
     {
-        public string Id { get; set; }
-        public string StorageId { get; set; }
+        public int Id { get; set; }
+        public int StorageId { get; set; }
         public DateTime CreationDate { get; set; }
         public int Quantity { get; set; }
 

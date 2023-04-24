@@ -9,11 +9,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
      <div class="modal-body">
+         <h2>Create product</h2>
             <div class="main-container-form-create">
                 <EditForm Model="_product">
                     <div class="form-group">
                         <label>Reference:</label>
-                        <InputText @bind-Value="_product.Id" class="form-control"></InputText>
+                        <InputNumber @bind-Value="_product.Id" class="form-control"></InputNumber>
                     </div>
                     <div class="form-group">
                         <label>Name:</label>

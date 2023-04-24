@@ -20,48 +20,64 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Footer.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb290ZXIucmF6b3I=
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/FooterComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb290ZXJDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lLnJhem9y
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/HomeComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/CreateProduct.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XENyZWF0ZVByb2R1Y3QucmF6b3I=
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/ActionsSelectComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEFjdGlvbnNTZWxlY3RDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/InfoAlertProduct.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEluZm9BbGVydFByb2R1Y3QucmF6b3I=
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/CreateProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XENyZWF0ZVByb2R1Y3RDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/ListProduct.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XExpc3RQcm9kdWN0LnJhem9y
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/EditProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEVkaXRQcm9kdWN0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/InfoAlertProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEluZm9BbGVydFByb2R1Y3RDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/ListProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XExpc3RQcm9kdWN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/User/ModalCreateUser.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyXE1vZGFsQ3JlYXRlVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Category.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnkucmF6b3I=
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/CategoryPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Product.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/ProductPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/UserRegistry.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclJlZ2lzdHJ5LnJhem9y
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Product/ProductDetailPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0RGV0YWlsUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Product/ProductListPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0TGlzdFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/UserRegistryPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclJlZ2lzdHJ5UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Shared/SurveyPrompt.razor]

@@ -22,15 +22,18 @@
                         Add product
                     </button>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <CreateProduct></CreateProduct>
+                        <CreateProductComponent></CreateProductComponent>
                     </div>
                 </div>
             </Authorized>
             <NotAuthorized>
-                <InfoAlertProduct></InfoAlertProduct>
+                <InfoAlertProductComponent></InfoAlertProductComponent>
             </NotAuthorized>
         </AuthorizeView>
         <div class="col-4 pb-4 pe-0 ps-0">
+            <button @onclick="@OnInitializedAsync">
+                Refresh
+            </button>
             <select class="form-select" @onchange="@CategoryChanged">
                 <option value="">Select a category</option>
                 @foreach (var category in _categories)
@@ -44,6 +47,7 @@
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
+                    <th>Actions</th>
                     <th>Reference</th>
                     <th>Name</th>
                     <th>Description</th>
@@ -55,6 +59,16 @@
                 @foreach (var product in _temporalProducts)
                 {
                     <tr>
+                        <td>
+                            <AuthorizeView>
+                                <Authorized>
+                                    <a href="/product/edit/@product.Id">Edit</a>
+                                </Authorized>
+                                <NotAuthorized>
+                                    NoAutorizado
+                                </NotAuthorized>
+                            </AuthorizeView>
+                        </td>
                         <td>@product.Id</td>
                         <td>@product.Name</td>
                         <td>@product.Description</td>
@@ -69,14 +83,17 @@
 
 @code {
 
+
     private List<Product> _products = new();
-    //Para cargar temporalmente los productos
     private List<Product> _temporalProducts = new();
     public List<Category> _categories = new();
 
+    /// <summary>
+    /// Initialized for get products and categories list.
+    /// </summary>
+    /// <returns></returns>
     protected override async Task OnInitializedAsync()
     {
-        //Se traen productos y categorias
         _products = await ProductService.ItemList();
         _temporalProducts = _products;
         _categories = await CategoryService.ItemList();
@@ -85,7 +102,7 @@
     //ChangeEventArgs me trae el valor del evento que captura el formulario
     private void CategoryChanged(ChangeEventArgs e)
     {
-        _temporalProducts = _products.Where(p => p.CategoryId == e.Value!.ToString()).ToList();
+        _temporalProducts = _products.Where(p => p.CategoryId.ToString() == e.Value!.ToString()).ToList();
     }
 
 }
