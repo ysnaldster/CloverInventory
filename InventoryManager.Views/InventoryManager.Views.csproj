@@ -33,8 +33,4 @@
     <ProjectReference Include="..\InventoryManager.Infrastructure\InventoryManager.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\Category\" />
-  </ItemGroup>
-
 </Project>

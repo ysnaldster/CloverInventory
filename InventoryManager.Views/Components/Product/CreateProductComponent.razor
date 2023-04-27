@@ -3,13 +3,12 @@
 @attribute [Authorize(Roles = "Administrator")]
 
 <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-header">
-         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Create product</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
-     <div class="modal-body">
-         <h2>Create product</h2>
+        </div>
+        <div class="modal-body">
             <div class="main-container-form-create">
                 <EditForm Model="_product">
                     <div class="form-group">
@@ -20,22 +19,37 @@
                         <label>Name:</label>
                         <InputText @bind-Value="_product.Name" class="form-control"></InputText>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-2 pb-2">
                         <label>Description</label>
                         <InputText @bind-Value="_product.Description" class="form-control"></InputText>
                     </div>
                     <div class="form-group">
-                        <label>Category:</label>
-                    
+                        @if (showButton)
+                        {
+                            <button @onclick="@FindCategories" class="btn btn-primary">Click for select a category</button>                       
+                        }
+                        @if (_categories.Count > 0)
+                        {
+                            <label>Category</label>
+                            <InputSelect @bind-Value="_product.CategoryId" class="form-control pt-2 mt-3">
+                                <option @onclick="FindCategories">Select a category</option>
+                                @foreach (var category in _categories)
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            </InputSelect>                            
+                        }
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" @onclick="SaveProduct">Add Product</button>
                     </div>
                 </EditForm>
+
             </div>
-     </div>
-     <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" @onclick="SaveProduct">Add Product</button>
-     </div>
-</div>
+        </div>
+   
+    </div>
 </div>
 
 @inject ProductService ProductService;
@@ -43,14 +57,17 @@
 @code {
     private Product _product = new();
     private List<Category> _categories = new();
+    private bool showButton = true;
+    private bool showModal = false;
 
-    protected override async Task OnInitializedAsync()
+    public async void FindCategories()
     {
-        //_categories = await CategoryService.ItemList();
+        _categories = await CategoryService.ItemList();
     }
 
     private async void SaveProduct()
     {
         await ProductService.CreateItem(_product);
+        showModal = true;
     }
 }

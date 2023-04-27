@@ -1,6 +1,7 @@
 ﻿using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repositories;
 using InventoryManager.Infrastructure;
+using InventoryManager.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,43 +11,23 @@ using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
-    public class UserService : IGenericRestRepository<User>
+    public class UserService
     {
-        private readonly InventoryManagerContext? _context;
-
-        public UserService(InventoryManagerContext inventoryManagerContext)
+        private readonly IGenericRestRepository<User>? _userRepository;
+        private readonly UserRepository userRepositoryCustom;
+        public UserService(IGenericRestRepository<User>? userRepository, UserRepository userRepositoryCustom)
         {
-            _context = inventoryManagerContext;
+            _userRepository = userRepository;
+            this.userRepositoryCustom = userRepositoryCustom;
         }
 
         public async Task<User?> GetUserByUserName(string? username)
         {
-            return await _context!.Users!.FirstOrDefaultAsync(p => p.UserName == username);
+            return await userRepositoryCustom.GetUserByUserName(username);
         }
-
-        public async Task<List<User>> ItemList()
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task CreateItem(User? user)
         {
-            Random rnd = new Random();
-            if (user == null) throw new ArgumentNullException(nameof(user));
-            user.Id = rnd.Next(10000);
-            user.Role = "User";
-            await _context!.AddAsync(user);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteItem(User? user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task UpdateItem(User? user)
-        {
-            throw new NotImplementedException();
+            await _userRepository!.CreateItem(user);
         }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using InventoryManager.Application.Services;
+using InventoryManager.Domain.Entities;
+using InventoryManager.Domain.Repositories;
 using InventoryManager.Infrastructure;
+using InventoryManager.Infrastructure.Repositories;
 using InventoryManager.Views.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
@@ -23,9 +26,20 @@ public class Startup
         services.AddNpgsql<InventoryManagerContext>(connectionString);
         services.AddScoped<ProtectedSessionStorage>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+        services.AddScoped<IGenericRestRepository<Category>, CategoryRepository>();
+        services.AddScoped<IGenericRestRepository<Product>, ProductRepository>();
+        services.AddScoped<IGenericRestRepository<User>, UserRepository>();
+        services.AddScoped<IGenericRestRepository<Storage>, StorageRepository>();
+        services.AddScoped<IGenericRestRepository<Warehouse>, WarehouseRepository>();
+        services.AddScoped<IGenericRestRepository<TransactionLog>, TransactionLogRepository>();
+        services.AddScoped<StorageRepository>();
+        services.AddScoped<UserRepository>();
         services.AddScoped<UserService>();
-        services.AddScoped<ProductService>();
         services.AddScoped<CategoryService>();
+        services.AddScoped<ProductService>();
+        services.AddScoped<StorageService>();
+        services.AddScoped<WarehouseService>();
+        services.AddScoped<TransactionLogService>();
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 

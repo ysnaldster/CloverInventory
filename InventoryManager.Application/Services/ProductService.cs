@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
-    public class ProductService : IGenericRestRepository<Product>
+    public class ProductService
     {
-        private readonly InventoryManagerContext? _context;
+        private readonly IGenericRestRepository<Product>? _productRepository;
 
-        public ProductService(InventoryManagerContext dbContext)
+        public ProductService(IGenericRestRepository<Product>? productRepository)
         {
-            _context = dbContext;
+            _productRepository = productRepository;
         }
 
         public ProductService() { }
@@ -24,41 +24,27 @@ namespace InventoryManager.Application.Services
      
         public async Task<List<Product>> ItemList()
         {
-            return await _context!.Products!
-                .Include(p => p.Category)
-                .AsNoTracking()
-                .ToListAsync();
+            return await _productRepository!.ItemList();
         }
 
-        public async Task<Product> FindItem(int id)
+        public async Task<Product> Item(int id)
         {
-            return (await _context!.Products!.SingleOrDefaultAsync(p => p.Id == id))!;
+            return await _productRepository!.Item(id);
         }
 
         public async Task CreateItem(Product? product)
         {
-            if (product == null) throw new ArgumentNullException(nameof(product));
-            await _context!.AddAsync(product);
-            await _context.SaveChangesAsync();
+            await _productRepository!.CreateItem(product);
         }
 
         public async Task UpdateItem(Product? product)
         {
-            if (product == null) throw new ArgumentNullException(nameof(product));
-            var actualProduct = await _context!.Products!.SingleOrDefaultAsync(p => p.Id == product.Id);
-            actualProduct!.Name = product.Name;
-            actualProduct!.Description = product.Description;
-            actualProduct!.TotalQuantity = product.TotalQuantity;
-            await _context.SaveChangesAsync();
+            await _productRepository!.UpdateItem(product);
         }
 
         public async Task DeleteItem(Product? product)
         {
-            var productToDelete = await _context!.Products!
-                .Where(s => s.Id == product!.Id)
-                .SingleOrDefaultAsync();
-            _context.Remove(productToDelete!);
-            await _context.SaveChangesAsync();
+            await _productRepository!.DeleteItem(product);
         }
     }
 }

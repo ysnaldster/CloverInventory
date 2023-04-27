@@ -1,0 +1,69 @@
+﻿@using InventoryManager.Application.Services
+@using InventoryManager.Domain.Entities
+<EditForm Model="@_storage">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label for="categories">Warehouse:</label>
+        <InputSelect id="warehouses" @bind-Value="_storage.WarehouseId" class="form-control">
+            <option value="">Select Warehouse ...</option>
+            @foreach (var warehouse in _wineries)
+            {
+                <option value="@warehouse.Id">@warehouse.Name</option>
+            }
+        </InputSelect>
+    </div>
+    <div class="form-group">
+        <label for="products">Product:</label>
+        <InputSelect id="products" @bind-Value="_storage.ProductId" class="form-control">
+            <option value="">Select product ...</option>
+            @foreach (var product in _products)
+            {
+                <option value="@product.Id">@product.Name</option>
+            }
+        </InputSelect>
+    </div>
+    <div class="form-group">
+        <input type="button" value="Add Product" @onclick="SaveStorage" class="form-control btn btn-dark" />
+    </div>
+</EditForm>
+<hr />
+<div class="h3 text-center">
+    @Message
+</div>
+<hr />
+
+@inject StorageService StorageService;
+@inject WarehouseService WarehouseService;
+@inject ProductService ProductService;
+
+@code {
+    private Storage _storage = new();
+    private List<Warehouse> _wineries = new();
+    private List<Product> _products = new();
+
+    string Message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _wineries = await WarehouseService.ItemList();
+        _products = await ProductService.ItemList();
+    }
+
+    private async void SaveStorage()
+    {
+        var storageWarehouseId = _storage.WarehouseId.ToString();
+        var storageProductId = _storage.ProductId.ToString();
+        var storageToString = _storage.Id.ToString();
+        storageToString = $"{storageWarehouseId}-{storageProductId}";
+        if (!StorageService.IsProductWarehouse(storageToString))
+        {
+            await StorageService.CreateItem(_storage);
+            Message = "Product Register";
+        }
+        else
+        {
+            Message = "Product Already Exist";
+        }
+    }
+
+}

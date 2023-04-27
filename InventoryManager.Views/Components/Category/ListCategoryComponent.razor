@@ -1,8 +1,5 @@
-﻿@page "/category";
-@using InventoryManager.Application.Services
+﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
-@inject CategoryService CategoryService;
-
 <div class="container">
     <div class="row">
 
@@ -20,6 +17,10 @@
         }
     </div>
 </div>
+
+
+@inject CategoryService CategoryService;
+
 @code {
     private List<Category> _categories = new();
 
@@ -28,4 +29,5 @@
         //Se traen categorias
         _categories = await CategoryService.ItemList();
     }
+
 }

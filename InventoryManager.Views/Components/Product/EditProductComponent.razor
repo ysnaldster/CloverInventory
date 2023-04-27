@@ -3,34 +3,43 @@
 @using InventoryManager.Application.Services;
 @using InventoryManager.Domain.Entities
 @inject NavigationManager NavManager;
-@attribute [Authorize(Roles = "Administrator")]
 
-<div>
-        <EditForm Model="_product">
-            <div class="form-group">
-                <label>Reference:</label>
-            <InputNumber @bind-Value="_product.Id" class="form-control"></InputNumber>
+<div class="list-products-action-container">
+    <div class="container-fluid card list-products-action-form mt-5 p-5">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg>
             </div>
-            <div class="form-group">
-                <label>Name:</label>
-                <InputText @bind-Value="_product.Name" class="form-control"></InputText>
-            </div>
-            <div class="form-group">
-                <label>Description</label>
-                <InputText @bind-Value="_product.Description" class="form-control"></InputText>
-            </div>
-            <div class="form-group">
-                <label>Category:</label>
-                <InputSelect @bind-Value="_product.CategoryId" class="form-control">
-                    @foreach (var category in _categories)
-                    {
-                        <option value="@category.Id">@category.Name</option>
-                    }
-                </InputSelect>
-            </div>
-            <button type="button" class="btn btn-primary" @onclick="SaveProduct">Update product</button>
-        </EditForm>
+            <h1 class="mt-3 mb-3">Edit product</h1>
+            <EditForm Model="_product">
+                <div class="form-group">
+                    <strong>Reference:</strong>
+                <InputNumber @bind-Value="_product.Id" class="form-control mt-1"></InputNumber>
+                </div>
+                <div class="form-group">
+                    <strong>Name:</strong>
+                <InputText @bind-Value="_product.Name" class="form-control mt-1"></InputText>
+                </div>
+                <div class="form-group">
+                    <strong>Description</strong>
+                <InputText @bind-Value="_product.Description" class="form-control mt-1"></InputText>
+                </div>
+                <div class="form-group">
+                    <strong>Category:</strong>
+                <InputSelect @bind-Value="_product.CategoryId" class="form-control mt-1">
+                        @foreach (var category in _categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+                <a href="/product" class="button btn btn-danger mt-4">Cancel</a>
+            <button type="button" class="btn btn-primary mt-4" @onclick="SaveProduct">Update product</button>
+            </EditForm>
+    </div>
 </div>
+
 
 @inject ProductService ProductService;
 @inject CategoryService CategoryService;
@@ -44,13 +53,13 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _product = await ProductService.FindItem(id);          
+        _product = await ProductService.Item(id);          
         _categories = await CategoryService.ItemList();
     }
 
     private async void SaveProduct()
     {
         await ProductService.UpdateItem(_product);
-        NavManager.NavigateTo("/");
+        NavManager.NavigateTo("/product");
     }
 }
