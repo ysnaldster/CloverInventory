@@ -1,5 +1,4 @@
 ﻿using InventoryManager.Application.Services;
-using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repositories;
 using InventoryManager.Infrastructure;
 using InventoryManager.Infrastructure.Repositories;
@@ -26,20 +25,17 @@ public class Startup
         services.AddNpgsql<InventoryManagerContext>(connectionString);
         services.AddScoped<ProtectedSessionStorage>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
-        services.AddScoped<IGenericRestRepository<Category>, CategoryRepository>();
-        services.AddScoped<IGenericRestRepository<Product>, ProductRepository>();
-        services.AddScoped<IGenericRestRepository<User>, UserRepository>();
-        services.AddScoped<IGenericRestRepository<Storage>, StorageRepository>();
-        services.AddScoped<IGenericRestRepository<Warehouse>, WarehouseRepository>();
-        services.AddScoped<IGenericRestRepository<TransactionLog>, TransactionLogRepository>();
-        services.AddScoped<StorageRepository>();
-        services.AddScoped<UserRepository>();
-        services.AddScoped<UserService>();
-        services.AddScoped<CategoryService>();
+        services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IStorageRepository, StorageRepository>();
+        services.AddScoped<IWarehouseRepository, WarehouseRepository>();
         services.AddScoped<ProductService>();
+        services.AddScoped<CategoryService>();
         services.AddScoped<StorageService>();
         services.AddScoped<WarehouseService>();
-        services.AddScoped<TransactionLogService>();
+        services.AddScoped<StorageRepository>();
+        services.AddScoped<UserService>();
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 

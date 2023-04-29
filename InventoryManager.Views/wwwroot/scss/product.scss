@@ -8,58 +8,19 @@
         h1 {
             color: $main-green;
         }
-
-        .informative-alert-container {
-            @include displayWithHeightSettings();
-        }
-
         .list-products-selected-categories-container {
-            @include displayFlexbox();
-        }
-    }
-}
+            @include displayFlexbox($justify-content: init, $align-items: init);
 
-.list-products-action-container {
-    background-image: url(https://i.ibb.co/60m9W79/img-Inventario.jpg);
-    position: absolute;
-    height: 100vh;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-
-    .list-products-action-form {
-        @include displayFlexbox();
-        width: 30% !important;
-        position: relative;
-        background-color: #f8f9fa !important;
-
-        .list-products-action-form-header {
-            @include displayFlexbox();
-
-            h1 {
-                font-size: 60px;
-                color: $main-green;
-            }
-        }
-
-        .list-products-action-form-subcontainer {
-            p {
-                font-size: 20px;
-            }
-
-            .list-products-delete-warning {
-                font-size: 20px;
-                color: red;
-                font-weight: bold;
-            }
-
-            form {
-                @include displayFlexbox($justify-content: init);
+            .list-products-selected-categories-subcontainer {
+                @include displayFlexbox();
+                width: 50%;
             }
         }
     }
 }
 
-.registry-transactions-buttons-container {
-    @include displayFlexbox($justify-content: init);
+.delete-product-warning {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
 }

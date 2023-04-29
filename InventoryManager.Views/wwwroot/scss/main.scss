@@ -7,7 +7,7 @@ $tertiary-green: #68F276;
 $main-grey: #8a8e96;
 ﻿
 html, body {
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
     height: 100%;
 }
@@ -31,4 +31,13 @@ html, body {
 @mixin displayWithHeightSettings($height: auto, $width: auto) {
     height: $height;
     width: $width;
+}
+
+//Mixion for show template into forms
+@mixin buildTemplateForms() {
+    position: absolute;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
 }

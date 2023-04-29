@@ -4,9 +4,10 @@ namespace InventoryManager.Domain.Repositories
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> ListProduct();
-        Task CreateProduct(Product product);
-        Task UpdateProduct(Product product);
-        Task DeleteProduct(Product product);
+        Task<List<Product>> GetProductsListAsync();
+        Task<Product?> GetProductAsync(int id);
+        Task CreateProductAsync(Product product);
+        Task UpdateProductAsync(Product product);
+        Task DeleteProductAsync(Product product);
     }
 }

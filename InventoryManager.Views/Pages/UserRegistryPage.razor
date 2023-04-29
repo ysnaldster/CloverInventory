@@ -42,6 +42,8 @@
     /// Create User entityh for insert into DB a new User
     /// </summary>
     private User user = new();
+    private const string InvokeType = "alert", CreatedMessage = "The user was created successfully",
+    StrongPassword = "Insert a strong password";
 
     private async Task RegistryUser()
     {
@@ -50,12 +52,12 @@
 
         if (passwordValidated != PasswordValidateSecurityLevel.SecurityLevel.Strong)
         {
-            await js.InvokeVoidAsync("alert", "Insert a strong password");
+            await js.InvokeVoidAsync(InvokeType, StrongPassword);
             return;
         }
 
-        await UserService.CreateItem(user);
-        
+        await UserService.CreateUser(user);
+        await js.InvokeVoidAsync(InvokeType, CreatedMessage);
         navManager.NavigateTo("/login", true);
     }
 }

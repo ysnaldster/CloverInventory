@@ -1,7 +1,7 @@
 ﻿@charset "UTF-8";
 ﻿ html,
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   height: 100%;
 }
@@ -13,57 +13,20 @@ body {
 .container-fluid .list-products-sub-container h1 {
   color: #349977;
 }
-.container-fluid .list-products-sub-container .informative-alert-container {
-  height: auto;
-  width: auto;
-}
 .container-fluid .list-products-sub-container .list-products-selected-categories-container {
   display: flex;
+  justify-content: init;
+  align-items: init;
+}
+.container-fluid .list-products-sub-container .list-products-selected-categories-container .list-products-selected-categories-subcontainer {
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
-.list-products-action-container {
-  background-image: url(https://i.ibb.co/60m9W79/img-Inventario.jpg);
-  position: absolute;
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-}
-.list-products-action-container .list-products-action-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30% !important;
-  position: relative;
-  background-color: #f8f9fa !important;
-}
-.list-products-action-container .list-products-action-form .list-products-action-form-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.list-products-action-container .list-products-action-form .list-products-action-form-header h1 {
-  font-size: 60px;
-  color: #349977;
-}
-.list-products-action-container .list-products-action-form .list-products-action-form-subcontainer p {
-  font-size: 20px;
-}
-.list-products-action-container .list-products-action-form .list-products-action-form-subcontainer .list-products-delete-warning {
-  font-size: 20px;
+.delete-product-warning {
+  font-size: 18px;
   color: red;
   font-weight: bold;
-}
-.list-products-action-container .list-products-action-form .list-products-action-form-subcontainer form {
-  display: flex;
-  justify-content: init;
-  align-items: center;
-}
-
-.registry-transactions-buttons-container {
-  display: flex;
-  justify-content: init;
-  align-items: center;
 }

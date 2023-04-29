@@ -15,7 +15,7 @@ namespace InventoryManager.Infrastructure.Repositories
 
         public ProductRepository() { }
 
-        public async Task<IEnumerable<Product>> ListProduct()
+        public async Task<List<Product>> GetProductsListAsync()
         {
             return await _context!.Products!
                 .Include(p => p.Category)
@@ -23,14 +23,19 @@ namespace InventoryManager.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task CreateProduct(Product product)
+        public async Task<Product?> GetProductAsync(int id)
+        {
+            return await _context!.Products!.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task CreateProductAsync(Product product)
         {
             if (product == null) throw new ArgumentNullException(nameof(product));
             await _context!.AddAsync(product);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateProduct(Product product)
+        public async Task UpdateProductAsync(Product product)
         {
             if (product == null) throw new ArgumentNullException(nameof(product));
             var actualProduct = await _context!.Products!.SingleOrDefaultAsync(p => p.Id == product.Id);
@@ -40,7 +45,7 @@ namespace InventoryManager.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteProduct(Product product)
+        public async Task DeleteProductAsync(Product product)
         {
             var productToDelete = await _context!.Products!
                 .Where(s => s.Id == product!.Id)

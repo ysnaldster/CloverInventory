@@ -1,20 +1,11 @@
 ﻿using InventoryManager.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManager.Infrastructure
 {
     public class InventoryManagerContext : DbContext
     {
-
         public InventoryManagerContext(DbContextOptions<InventoryManagerContext> options) : base(options) { }
-
-        //Config Fluent API
 
         public DbSet<Category>? Categories { get; set; }
         public DbSet<Product>? Products { get; set; }
@@ -35,7 +26,6 @@ namespace InventoryManager.Infrastructure
                 category.Property(c => c.Name).IsRequired().HasMaxLength(20).HasColumnName("Name");
                 category.HasData(InitData.LoadCategories());
             });
-
 
             // Create WinerySchema
             modelBuilder.Entity<Warehouse>(winery =>
@@ -65,7 +55,7 @@ namespace InventoryManager.Infrastructure
             {
                 storage.ToTable("storage");
                 storage.HasKey(s => s.Id);
-                storage.HasOne(s => s.Product).WithMany(s => s.Storages);
+                storage.HasOne(s => s.Product).WithMany(s => s.Storages).OnDelete(DeleteBehavior.Cascade);
                 storage.HasOne(s => s.Warehouse).WithMany(s => s.Storages);
                 storage.Property(s => s.PartialQuantity).HasColumnName("PartialQuantity");
                 storage.Property(s => s.CreationDate).HasDefaultValue(DateTime.Now).HasColumnName("CreationDate");
@@ -106,7 +96,7 @@ namespace InventoryManager.Infrastructure
             {
                 pivot.ToTable("product_user");
                 pivot.HasKey(p => p.Id);
-                pivot.HasOne(p => p.Product).WithMany(p => p.ProductPivots);
+                pivot.HasOne(p => p.Product).WithMany(p => p.ProductPivots).OnDelete(DeleteBehavior.Cascade);
                 pivot.HasOne(p => p.User).WithMany(p => p.UserPivots);
 
                 pivot.HasData(InitData.LoadProductUserPivot());

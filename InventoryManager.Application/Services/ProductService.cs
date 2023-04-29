@@ -1,50 +1,40 @@
 ﻿using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repositories;
-using InventoryManager.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
     public class ProductService
     {
-        private readonly IGenericRestRepository<Product>? _productRepository;
+        private readonly IProductRepository _productRepository;
 
-        public ProductService(IGenericRestRepository<Product>? productRepository)
+        public ProductService(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-
-        public ProductService() { }
-
      
-        public async Task<List<Product>> ItemList()
+        public async Task<List<Product>> GetProductsList()
         {
-            return await _productRepository!.ItemList();
+            return await _productRepository!.GetProductsListAsync();
         }
 
-        public async Task<Product> Item(int id)
+        public async Task<Product?> GetProduct(int id)
         {
-            return await _productRepository!.Item(id);
+            return await _productRepository!.GetProductAsync(id);
         }
 
-        public async Task CreateItem(Product? product)
+        public async Task CreateProduct(Product product)
         {
-            await _productRepository!.CreateItem(product);
+            await _productRepository!.CreateProductAsync(product);
         }
 
-        public async Task UpdateItem(Product? product)
+        public async Task UpdateProduct(Product product)
         {
-            await _productRepository!.UpdateItem(product);
+            await _productRepository!.UpdateProductAsync(product);
         }
 
-        public async Task DeleteItem(Product? product)
+        public async Task DeleteProduct(Product product)
         {
-            await _productRepository!.DeleteItem(product);
+            await _productRepository!.DeleteProductAsync(product);
         }
     }
 }

@@ -65,6 +65,18 @@
       "PackagePath": "staticwebassets\\scss\\footer.scss"
     },
     {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\forms.css",
+      "PackagePath": "staticwebassets\\scss\\forms.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\forms.min.css",
+      "PackagePath": "staticwebassets\\scss\\forms.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\forms.scss",
+      "PackagePath": "staticwebassets\\scss\\forms.scss"
+    },
+    {
       "Id": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Views\\wwwroot\\scss\\home.css",
       "PackagePath": "staticwebassets\\scss\\home.css"
     },

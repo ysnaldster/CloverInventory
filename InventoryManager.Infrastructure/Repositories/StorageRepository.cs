@@ -1,15 +1,10 @@
 ﻿using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManager.Infrastructure.Repositories
 {
-    public class StorageRepository : IGenericRestRepository<Storage>
+    public class StorageRepository : IStorageRepository
     {
         private static InventoryManagerContext? _context;
 
@@ -18,44 +13,13 @@ namespace InventoryManager.Infrastructure.Repositories
             _context = dbContext;
         }
 
-        public async Task<List<Storage>> ItemList()
+        public bool ValidateProductIntoWarehouse(string storageId)
         {
-            return await _context!.Storages!
-                .AsNoTracking()
-                .ToListAsync();
-        }
-
-        public async Task CreateItem(Storage? storage)
-        {
-            if (storage == null) throw new ArgumentNullException(nameof(storage));
-            await _context!.AddAsync(storage);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateItem(Storage? storage)
-        {
-            if (storage == null) throw new ArgumentNullException(nameof(storage));
-            var actualStore = await _context!.Storages!.SingleOrDefaultAsync(p => p.Id == storage.Id);
-            actualStore!.PartialQuantity = storage.PartialQuantity;
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteItem(Storage? storage)
-        {
-            var storageToDelete = await _context!.Storages!
-                .Where(s => s.Id == storage!.Id)
-                .SingleOrDefaultAsync();
-            _context.Remove(storageToDelete!);
-            await _context.SaveChangesAsync();
-        }
-
-        public bool IsProductWarehouse(string idStorage)
-        {
-            var validate = _context!.Storages!.ToList().Where(p => p.Id.ToString() == idStorage);
+            var validate = _context!.Storages!.ToList().Where(p => p.Id.ToString() == storageId);
             return validate.Any();
         }
 
-        public async Task<List<Storage>> StorageProductsByWarehouse(int warehouseId)
+        public async Task<List<Storage>> GetStoragesProductsByWarehouseListAsync(int warehouseId)
         {
             return await _context!.Storages!
                 .Include(s => s.Product)
@@ -65,9 +29,35 @@ namespace InventoryManager.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public Task<Storage> Item(int id)
+        public async Task<List<Storage>> GetStoragesListAsync()
         {
-            throw new NotImplementedException();
+            return await _context!.Storages!
+               .AsNoTracking()
+               .ToListAsync();
+        }
+
+        public async Task CreateStorageAsync(Storage storage)
+        {
+            if (storage == null) throw new ArgumentNullException(nameof(storage));
+            await _context!.AddAsync(storage);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateStorageAsync(Storage storage)
+        {
+            if (storage == null) throw new ArgumentNullException(nameof(storage));
+            var actualStore = await _context!.Storages!.SingleOrDefaultAsync(p => p.Id == storage.Id);
+            actualStore!.PartialQuantity = storage.PartialQuantity;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteStorageAsync(Storage storage)
+        {
+            var storageToDelete = await _context!.Storages!
+               .Where(s => s.Id == storage!.Id)
+               .SingleOrDefaultAsync();
+            _context.Remove(storageToDelete!);
+            await _context.SaveChangesAsync();
         }
     }
 }

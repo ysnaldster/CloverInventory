@@ -1,33 +1,23 @@
 ﻿using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repositories;
-using InventoryManager.Infrastructure;
-using InventoryManager.Infrastructure.Repositories;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManager.Application.Services
 {
     public class UserService
     {
-        private readonly IGenericRestRepository<User>? _userRepository;
-        private readonly UserRepository userRepositoryCustom;
-        public UserService(IGenericRestRepository<User>? userRepository, UserRepository userRepositoryCustom)
+        private readonly IUserRepository _userRepository;
+        public UserService(IUserRepository userRepository)
         {
-            _userRepository = userRepository;
-            this.userRepositoryCustom = userRepositoryCustom;
+            _userRepository = userRepository;           
         }
 
-        public async Task<User?> GetUserByUserName(string? username)
+        public async Task<User?> GetUserByUserName(string username)
         {
-            return await userRepositoryCustom.GetUserByUserName(username);
+            return await _userRepository.GetUserByUserNameAsync(username);
         }
-        public async Task CreateItem(User? user)
+        public async Task CreateUser(User user)
         {
-            await _userRepository!.CreateItem(user);
+            await _userRepository!.CreateUserAsync(user);
         }
     }
 }

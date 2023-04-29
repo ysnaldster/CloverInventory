@@ -3,6 +3,7 @@
 @inject ProductService ProductService
 @inject CategoryService CategoryService;
 @attribute [Authorize(Roles = "Administrator")]
+@inject IJSRuntime js
 
 <div class="container-fluid m-0 pt-3 pb-3">
     <div class="row list-products-sub-container">
@@ -17,26 +18,29 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create product</h1>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16" style="color: green">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                                    </svg>
+                                    <h1 class="modal-title fs-5 ms-3" id="exampleModalLabel">Create product</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="main-container-form-create">
                                         <EditForm Model="_product" Context="productFormContext">
                                             <div class="form-group">
-                                                <label>Reference:</label>
+                                                <strong>Reference</strong>
                                                 <InputNumber @bind-Value="_product.Id" class="form-control"></InputNumber>
                                             </div>
                                             <div class="form-group">
-                                                <label>Name:</label>
+                                                <strong>Name:</strong>
                                                 <InputText @bind-Value="_product.Name" class="form-control"></InputText>
                                             </div>
                                             <div class="form-group mb-2 pb-2">
-                                                <label>Description</label>
+                                                <strong>Description</strong>
                                                 <InputText @bind-Value="_product.Description" class="form-control"></InputText>
                                             </div>
                                             <div class="form-group">
-                                                <label>Category</label>
+                                                <strong>Category</strong>
                                                 <InputSelect @bind-Value="_product.CategoryId" class="form-control pt-2 mt-3">
                                                     <option>Select a category</option>
                                                     @foreach (var category in _categories)
@@ -49,35 +53,34 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" @onclick="SaveProduct">Add Product</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success" @onclick="SaveProduct">Add Product</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4 p-0 m-0">
-                    <a class="button btn btn-primary" value="Make transaction" href="/log/registry">Make transaction</a>
-                </div>        
+                </div>   
             </Authorized>
             <NotAuthorized>
                 <InfoAlertProductComponent></InfoAlertProductComponent>          
             </NotAuthorized>
         </AuthorizeView>
-        <div class="col-4 pb-4 pe-0 ps-0 list-products-selected-categories-container">
-            <button @onclick="@OnInitializedAsync" class="btn btn-primary me-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-                </svg>
-            </button>
-            <select class="form-select" @onchange="@CategoryChanged">
-                <option value="">Select a category</option>
-                @foreach (var category in _categories)
-                {
-                    <option value="@category.Id">@category.Name</option>
-                }
-            </select>
+        <div class="col-8 pb-4 pe-0 ps-0 list-products-selected-categories-container">
+            <div class="list-products-selected-categories-subcontainer">
+                <button @onclick="@OnInitializedAsync" class="btn btn-primary me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                    </svg>
+                </button>
+                <select class="form-select" @onchange="@CategoryChanged">
+                    <option value="">Select a category</option>
+                    @foreach (var category in _categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </select>
+            </div>
         </div>
     </div>
     <div class="row list-products-sub-container">
@@ -136,30 +139,32 @@
 </div>
 
 @code {
-    private List<Product> _products = new();
-    private List<Product> _temporalProducts = new();
+    private List<Product> _products = new ();
+    private List<Product> _temporalProducts = new ();
     public List<Category> _categories = new();
     private Product _product = new();
+    private const string MessageCreated = "Product created, please refresh the table", InvokeType = "alert";
 
     /// <summary>
-    /// Initialized for get products and categories list.
+    ///  Initialized for get products and categories list.
     /// </summary>
     /// <returns></returns>
     protected override async Task OnInitializedAsync()
     {
-        _products = await ProductService.ItemList();
+        _products = await ProductService.GetProductsList();
         _temporalProducts = _products;
-        _categories = await CategoryService.ItemList();
+        _categories = await CategoryService.GetCategories();
     }
 
-    //ChangeEventArgs me trae el valor del evento que captura el formulario
+    //Capture the event brought by the form
     private void CategoryChanged(ChangeEventArgs e)
     {
-        _temporalProducts = _products.Where(p => p.CategoryId.ToString() == e.Value!.ToString()).ToList();
+        _temporalProducts = _products!.Where(p => p.CategoryId.ToString() == e.Value!.ToString()).ToList();
     }
 
     private async void SaveProduct()
     {
-        await ProductService.CreateItem(_product);
+        await ProductService.CreateProduct(_product);
+        await js.InvokeVoidAsync(InvokeType, MessageCreated);
     }
 }

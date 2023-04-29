@@ -1,48 +1,49 @@
 ﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
+@attribute [Authorize(Roles = "Administrator")]
 
-
-<div class="list-products-action-container">
-    <div class="container-fluid card list-products-action-form mt-5 p-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="form-control">
-                <h2>Make transaction</h2>
-                    <label>Warehouse</label>
-                    <select class="form-control" @onchange="OnChangedWarehouse">
-                        <option values="">Select a warehouse</option>
-                        @foreach (var warehouse in _warehouses)
-                        {
-                            <option value="@warehouse.Id">@warehouse.Name</option>
-                        }
-                    </select>
-                </div>
-                <EditForm Model="_transactionLog">
-                    <div class="form-control">
-                        <label>Product (First select a warehouse)</label>
-                        <InputSelect class="form-control" @bind-Value="_transactionLog.StorageId">
-                            <option>Select a product</option>
-                            @foreach (var storage in _storages)
-                            {
-                                <option value="@storage.Id">@storage.Product!.Name</option>
-                            }
-                        </InputSelect>
-                    </div>
-                    <div class="form-control">
-                        <label>Write quantity</label>
-                        <InputNumber class="form-control" @bind-Value="_transactionLog.Quantity"></InputNumber>
-                    </div>
-                    <div class="form-group">
-                        <label>Is a input?</label>
-                        <InputCheckbox class="form-control" @bind-Value="_transactionLog.IsInput"/>
-                    </div>
-                    <div class="mt-3 registry-transactions-buttons-container">
-                        <a class="button btn btn-primary me-3" value="Cancelar" href="/product">Cancelar</a>
-                        <input type="button" value="@ButtonValue" class="form-control button btn btn-success" @onclick="@SaveTransactionLog" />
-                    </div>
-                </EditForm>
+<div class="form-container transaction-container">
+    <div class="container-fluid card form-sub-container mt-5 p-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" style="color: blue" class="bi bi-arrow-down-up"
+             viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+        </svg>
+        <h1 class="mt-2 mb-2">Make transaction</h1>      
+        <EditForm Model="_transactionLog">
+            <div class="form-group">
+                <strong class="mb-2">Warehouse</strong>
+                <select class="form-control" @onchange="OnChangedWarehouse">
+                    <option values="">Select a warehouse</option>
+                    @foreach (var warehouse in _warehouses)
+                    {
+                        <option value="@warehouse.Id">@warehouse.Name</option>
+                    }
+                </select>
             </div>
-        </div>
+            <div class="form-group">
+                <strong>Product (First select a warehouse)</strong>
+                <InputSelect class="form-control" @bind-Value="_transactionLog.StorageId">
+                    <option>Select a product</option>
+                    @foreach (var storage in _storages)
+                    {
+                        <option value="@storage.Id">@storage.Product!.Name</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group">
+                <strong>Write quantity</strong>
+                <InputNumber class="form-control" @bind-Value="_transactionLog.Quantity"></InputNumber>
+            </div>
+            <div class="form-group">
+                <strong>Is a input? (Input/Output)</strong> <br />
+                <input type="checkbox" checked @bind-value="_transactionLog.IsInput">
+            </div>
+            <div class="buttons-transaction-container mt-3">
+                <a class="button btn btn-danger me-3" value="Cancelar" href="/product">Cancelar</a>
+                <input type="button" value="@ButtonValue" class="form-control button btn btn-success"@onclick="@SaveTransactionLog" />         
+            </div>
+        </EditForm>
     </div>
 </div>
 
@@ -62,13 +63,13 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _warehouses = await WarehouseService.ItemList();
+        _warehouses = await WarehouseService.GetWarehouseList();
     }
 
     private async Task OnChangedWarehouse(ChangeEventArgs e)
     {
         var warehouseId = e.Value!.ToString();
-        _storages = await StorageService.StorageProductsByWarehouse(Int32.Parse(warehouseId));
+        _storages = await StorageService.StorageProductsByWarehouse(Int32.Parse(warehouseId!));
     }
 
     private async Task SaveTransactionLog()
@@ -79,10 +80,10 @@
         if (_transactionLog.IsInput)
         {
             _storage.PartialQuantity += _transactionLog.Quantity;
-            await StorageService.UpdateItem(_storage);
+            await StorageService.UpdateStorage(_storage);
 
             _product.TotalQuantity += _transactionLog.Quantity;
-            await ProductService.UpdateItem(_product);
+            await ProductService.UpdateProduct(_product);
             Message = $"Product {_product.Name} was updated success";
         }
         else
@@ -90,10 +91,10 @@
             if (IsBiggerThanZero(_transactionLog.Quantity, _storage!.PartialQuantity!.Value))
             {
                 _storage.PartialQuantity -= _transactionLog.Quantity;
-                await StorageService.UpdateItem(_storage);
+                await StorageService.UpdateStorage(_storage);
 
                 _product.TotalQuantity -= _transactionLog.Quantity;
-                await ProductService.UpdateItem(_product);
+                await ProductService.UpdateProduct(_product);
                 Message = $"Product {_product.Name} was updated success";
             }
             else

@@ -12,26 +12,29 @@
             </svg>
             <a class="navbar-brand" href="#">CloverInventory</a>
           </Authorized>
+          
       </AuthorizeView>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-           </li>
-          <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="product">Products</a>
-            </li>
-           <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="category/list">Categories</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#">Warehouses</a>
+                <a class="nav-link active" aria-current="page" href="product">Products</a>
             </li>
-             <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/log/registry">Transactions</a>
-            </li>
-      </ul>
-    </div>
+            <AuthorizeView>
+                <Authorized>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/storage">Storages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/transaction">Transaction</a>
+                    </li>
+                </Authorized>
+            </AuthorizeView>
+
+        </ul>
+       </div>
   </div>
     <AuthorizeView>
         <Authorized>
@@ -40,12 +43,8 @@
             </button>
         </Authorized>
         <NotAuthorized>
-            <button type="button" class="btn btn-primary button-save button-nav-container me-3">
-                <a href="registry">Register</a>
-            </button>
-            <button type="button" class="btn btn-success button-save button-nav-container me-3">
-                <a href="login">Login</a>
-            </button>
+            <a href="registry" type="button" class="btn btn-primary button-save button-nav-container me-3">Register</a>
+            <a href="login" type="button" class="btn btn-success button-save button-nav-container me-3">Login</a>
         </NotAuthorized>
     </AuthorizeView>
 </nav>
@@ -54,7 +53,7 @@
     private async Task Logout()
     {
         var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
-        await customAuthStateProvider.UpdateAuthenticationState(null);
+        await customAuthStateProvider.UpdateAuthenticationState(null!);
         navManager.NavigateTo("/", true);
     }
 }

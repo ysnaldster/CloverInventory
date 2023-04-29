@@ -1,36 +1,43 @@
 ﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
-<EditForm Model="@_storage">
-    <DataAnnotationsValidator />
-    <div class="form-group">
-        <label for="categories">Warehouse:</label>
-        <InputSelect id="warehouses" @bind-Value="_storage.WarehouseId" class="form-control">
-            <option value="">Select Warehouse ...</option>
-            @foreach (var warehouse in _wineries)
-            {
-                <option value="@warehouse.Id">@warehouse.Name</option>
-            }
-        </InputSelect>
+@inject NavigationManager NavManager;
+@inject IJSRuntime js
+@attribute [Authorize(Roles = "Administrator")]
+
+<div class="form-container storage-container">
+      <div class="container-fluid card form-sub-container mt-5 p-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16" style="color: green">
+            <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+        </svg>
+        <h2 class="mt-3">Create storage</h2>
+        <EditForm Model="@_storage">
+            <DataAnnotationsValidator />
+            <div class="form-group mt-2">
+                <strong for="categories">Warehouse</strong>
+                <InputSelect id="warehouses" @bind-Value="_storage.WarehouseId" class="form-control">
+                    <option value="">Select Warehouse ...</option>
+                    @foreach (var warehouse in _wineries)
+                    {
+                        <option value="@warehouse.Id">@warehouse.Name</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group mt-2">
+                <strong for="products">Product</strong>
+                <InputSelect id="products" @bind-Value="_storage.ProductId" class="form-control">
+                    <option value="">Select product ...</option>
+                    @foreach (var product in _products)
+                    {
+                        <option value="@product.Id">@product.Name</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group mt-3">
+                <input type="button" value="Add Product" @onclick="SaveStorage" class="form-control btn btn-success" />
+            </div>
+        </EditForm>
     </div>
-    <div class="form-group">
-        <label for="products">Product:</label>
-        <InputSelect id="products" @bind-Value="_storage.ProductId" class="form-control">
-            <option value="">Select product ...</option>
-            @foreach (var product in _products)
-            {
-                <option value="@product.Id">@product.Name</option>
-            }
-        </InputSelect>
-    </div>
-    <div class="form-group">
-        <input type="button" value="Add Product" @onclick="SaveStorage" class="form-control btn btn-dark" />
-    </div>
-</EditForm>
-<hr />
-<div class="h3 text-center">
-    @Message
 </div>
-<hr />
 
 @inject StorageService StorageService;
 @inject WarehouseService WarehouseService;
@@ -40,13 +47,13 @@
     private Storage _storage = new();
     private List<Warehouse> _wineries = new();
     private List<Product> _products = new();
-
-    string Message;
+    private const string TypeInvoke = "alert", ProductCreated = "Product successfully registered",
+    AlreadyExistProduct = "Product already exists";
 
     protected override async Task OnInitializedAsync()
     {
-        _wineries = await WarehouseService.ItemList();
-        _products = await ProductService.ItemList();
+        _wineries = await WarehouseService.GetWarehouseList();
+        _products = await ProductService.GetProductsList();
     }
 
     private async void SaveStorage()
@@ -57,12 +64,13 @@
         storageToString = $"{storageWarehouseId}-{storageProductId}";
         if (!StorageService.IsProductWarehouse(storageToString))
         {
-            await StorageService.CreateItem(_storage);
-            Message = "Product Register";
-        }
+            await StorageService.CreateStorage(_storage);
+            await js.InvokeVoidAsync(TypeInvoke, ProductCreated);
+            NavManager.NavigateTo("/product");
+        } 
         else
         {
-            Message = "Product Already Exist";
+            await js.InvokeVoidAsync(TypeInvoke, AlreadyExistProduct);
         }
     }
 

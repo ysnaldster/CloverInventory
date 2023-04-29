@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InventoryManager.Domain.Entities
+﻿namespace InventoryManager.Domain.Entities
 {
     public abstract class InitData
     {
@@ -141,17 +135,17 @@ namespace InventoryManager.Domain.Entities
                 new()
                 {
                     Id = 4078,
-                    UserName = "John",
-                    Password = "123456",
-                    Email = "john@mail.com",
+                    UserName = "Admin",
+                    Password = "admin",
+                    Email = "admin@mail.com",
                     Role = "Administrator"
                 },
                 new ()
                 {
                     Id = 4079,
-                    UserName = "Fabiana",
-                    Password = "123456",
-                    Email = "fabiana@mail.com",
+                    UserName = "Test",
+                    Password = "test",
+                    Email = "test@mail.com",
                     Role = "User"
                 }
             };

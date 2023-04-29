@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace InventoryManager.Application.Services
 {
@@ -11,9 +6,7 @@ namespace InventoryManager.Application.Services
     {
         public enum SecurityLevel
         {
-            Weak,
-            Medium,
-            Strong
+            Weak, Medium, Strong
         }
 
         public static SecurityLevel PasswordValidate(string password)
@@ -37,7 +30,6 @@ namespace InventoryManager.Application.Services
             {
                 return SecurityLevel.Medium;
             }
-
             return SecurityLevel.Weak;
         }
     }
