@@ -1,15 +1,10 @@
 ﻿using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManager.Infrastructure.Repositories
 {
-    public class ProductRepository : IGenericRestRepository<Product>
+    public class ProductRepository : IProductRepository
     {
         private readonly InventoryManagerContext? _context;
 
@@ -20,8 +15,7 @@ namespace InventoryManager.Infrastructure.Repositories
 
         public ProductRepository() { }
 
-
-        public async Task<List<Product>> ItemList()
+        public async Task<IEnumerable<Product>> ListProduct()
         {
             return await _context!.Products!
                 .Include(p => p.Category)
@@ -29,14 +23,14 @@ namespace InventoryManager.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task CreateItem(Product? product)
+        public async Task CreateProduct(Product product)
         {
             if (product == null) throw new ArgumentNullException(nameof(product));
             await _context!.AddAsync(product);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateItem(Product? product)
+        public async Task UpdateProduct(Product product)
         {
             if (product == null) throw new ArgumentNullException(nameof(product));
             var actualProduct = await _context!.Products!.SingleOrDefaultAsync(p => p.Id == product.Id);
@@ -46,18 +40,13 @@ namespace InventoryManager.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteItem(Product? product)
+        public async Task DeleteProduct(Product product)
         {
             var productToDelete = await _context!.Products!
                 .Where(s => s.Id == product!.Id)
                 .SingleOrDefaultAsync();
             _context.Remove(productToDelete!);
             await _context.SaveChangesAsync();
-        }
-
-        public async Task<Product> Item(int id)
-        {
-            return (await _context!.Products!.SingleOrDefaultAsync(p => p.Id == id))!;
         }
     }
 }
