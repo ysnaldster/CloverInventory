@@ -1,6 +1,8 @@
 ﻿@using InventoryManager.Application.Services
 @using InventoryManager.Domain.Entities
 @attribute [Authorize(Roles = "Administrator")]
+@inject NavigationManager navManager
+@inject IJSRuntime js
 
 <div class="form-container transaction-container">
     <div class="container-fluid card form-sub-container mt-5 p-5">
@@ -37,7 +39,7 @@
             </div>
             <div class="form-group">
                 <strong>Is a input? (Input/Output)</strong> <br />
-                <input type="checkbox" checked @bind-value="_transactionLog.IsInput">
+                <input type="checkbox" @bind-value="_transactionLog.IsInput">
             </div>
             <div class="buttons-transaction-container mt-3">
                 <a class="button btn btn-danger me-3" value="Cancelar" href="/product">Cancelar</a>
@@ -59,7 +61,7 @@
     private Storage _storage = new();
 
     string ButtonValue => _transactionLog.IsInput ? "Registry Input" : "Registry Output";
-    string Message;
+    string Message = null!, TypeInvoke = "alert";
 
     protected override async Task OnInitializedAsync()
     {
@@ -96,12 +98,14 @@
                 _product.TotalQuantity -= _transactionLog.Quantity;
                 await ProductService.UpdateProduct(_product);
                 Message = $"Product {_product.Name} was updated success";
+                
             }
             else
             {
                 Message = "Quantity doesn't exist in warehouse for the product";
             }
         }
+        await js.InvokeVoidAsync(TypeInvoke, Message);
     }
 
     private bool IsBiggerThanZero(int quantity, int storageQuantity)

@@ -1,21 +1,26 @@
 ﻿@import 'main';
 
-.navbar-main-container {
-    padding: 0px 48px !important;
+.navbar {
+    position: absolute !important;
+    width: 100%;
+    z-index: 1;
+    .navbar-main-container {
+        padding: 0px 48px !important;
 
-    svg {
-        color: $main-green;
-    }
+        svg {
+            color: $main-green;
+        }
 
-    .navbar-brand {
-        font-weight: bold;
-        color: $main-black;
-    }
+        .navbar-brand {
+            font-weight: bold;
+            color: $main-black;
+        }
 
-    .navbar-nav {
-        li {
-            a {
-                color: $main-black;
+        .navbar-nav {
+            li {
+                a {
+                    color: $main-black;
+                }
             }
         }
     }

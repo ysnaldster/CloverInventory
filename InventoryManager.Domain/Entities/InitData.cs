@@ -2,7 +2,6 @@
 {
     public abstract class InitData
     {
-        
         public static List<Warehouse> LoadWineries()
         {
             var wineries = new List<Warehouse>
@@ -60,7 +59,7 @@
                 CategoryId = 72207,
                 Name = "Frescolita",
                 Description = "simply dummy text of the printing and typesetting industry",
-                TotalQuantity = 15
+                TotalQuantity = 10
             }
         };
             return products;
@@ -75,37 +74,17 @@
                 Id = 91202,
                 ProductId = 66255,
                 WarehouseId = 86348,
-                PartialQuantity = 4
+                PartialQuantity = 10
             },
             new()
             {
                 Id = 91203,
                 ProductId = 66256,
                 WarehouseId = 86349,
-                PartialQuantity = 2
+                PartialQuantity = 10
             }
         };
             return stores;
-        }
-
-        public static List<TransactionLog> LoadLabelsTransactionLogs()
-        {
-            var transactionLogs = new List<TransactionLog>
-        {
-            new()
-            {
-                Id = 69044,
-                StorageId = 91202,
-                Quantity = 3
-            },
-            new()
-            {
-                Id = 69045,
-                StorageId = 91203,
-                Quantity = 2
-            }
-        };
-            return transactionLogs;
         }
 
         public static List<ProductUserPivot> LoadProductUserPivot()

@@ -1,12 +1,4 @@
-﻿@charset "UTF-8";
-﻿ html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.form-container {
+﻿.form-container {
   position: absolute;
   height: 100vh;
   background-position: center center;
@@ -20,6 +12,7 @@ body {
   width: 30%;
   position: relative;
   background-color: #f8f9fa;
+  margin-top: 100px !important;
 }
 .form-container form {
   width: 100%;

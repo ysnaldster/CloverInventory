@@ -8,7 +8,6 @@ namespace InventoryManager.Domain.Repositories
         Task CreateStorageAsync(Storage storage);
         Task UpdateStorageAsync(Storage storage);
         Task DeleteStorageAsync(Storage storage);
-
         bool ValidateProductIntoWarehouse(string storageId);
 
     }

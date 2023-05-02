@@ -1,26 +1,17 @@
 ﻿//Colors
 $main-black: #193B39;
-$main-blue: #68D4F2;
 $main-green: #349977;
-$secondary-green: #6DFCA4;
-$tertiary-green: #68F276;
 $main-grey: #8a8e96;
 ﻿
 html, body {
-    overflow-x: hidden;
-    margin: 0;
-    height: 100%;
 }
 
-//Clase principal para el display flex para centrar contenedores.
-//Mixin para centrar clases main-container
 @mixin displayFlexbox($justify-content: center, $align-items: center) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
 }
 
-//Mixin para dar estilos a todas las anclas o tags de html
 @mixin displayTags() {
     text-decoration: none;
     color: white;

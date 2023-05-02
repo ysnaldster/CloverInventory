@@ -1,12 +1,4 @@
-﻿@charset "UTF-8";
-﻿ html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.footer {
+﻿.footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -19,4 +11,5 @@ body {
 }
 .footer p {
   font-weight: bold;
+  margin: 0px;
 }

@@ -1,12 +1,4 @@
-﻿@charset "UTF-8";
-﻿ html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.container-fluid .login-container {
+﻿.container-fluid .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,5 +18,6 @@ body {
 .container-fluid img {
   height: 100vh;
   width: 100%;
+  position: relative;
   opacity: 0.8;
 }

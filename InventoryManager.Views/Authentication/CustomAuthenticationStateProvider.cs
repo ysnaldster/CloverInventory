@@ -7,9 +7,7 @@ namespace InventoryManager.Views.Authentication
 {
     public class CustomAuthenticationStateProvider : AuthenticationStateProvider
     {
-        //Vamos a guardar los detalles del inicio de sesión del usuario en el almacenamiento de sesion protegido
         private readonly ProtectedSessionStorage _sessionStorage;
-        //Se necesita para  guardar la información de la sesion. 
         private ClaimsPrincipal _anonymous = new ClaimsPrincipal(new ClaimsIdentity());
 
         public CustomAuthenticationStateProvider(ProtectedSessionStorage sessionStorage)
@@ -21,12 +19,11 @@ namespace InventoryManager.Views.Authentication
         {
             try
             {
-                //Se inspecciona el detalle de la sesion del usuario desde el almacenamiento.
-                //Esto tambien permitira que los datos se guarden en formato clave valor, con esto almacenamos el detalle
-                //de la sesión
+                //The user's session detail is inspected from storage.
+                //This will also allow the data to be stored in key-value format, thus storing the session detail.
                 var userSessionStorageResult = await _sessionStorage.GetAsync<UserSession>("UserSession");
                 var userSession = userSessionStorageResult.Success ? userSessionStorageResult.Value : null;
-                //Condicion para devolver el estado de autenticacion del usuario anomimo, esto si la sesion es nula
+                //Condition to return the authentication status of the anonymous user, this if the session is null
                 if (userSession == null)
                 {
                     return await Task.FromResult(new AuthenticationState(_anonymous));
@@ -45,8 +42,7 @@ namespace InventoryManager.Views.Authentication
           
         }
 
-        //Metodo para actualizar el estado de la autenticacion, se utilizara para cuando se haga 
-        //login y logout
+        //Method to update the authentication status, will be used for when you do login and logout
         public async Task UpdateAuthenticationState(UserSession userSession)
         {
             ClaimsPrincipal claimsPrincipal;

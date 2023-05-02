@@ -1,16 +1,4 @@
-﻿@charset "UTF-8";
-﻿ html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.parent-home-container {
-  height: 100vh;
-  width: 100vw;
-}
-.parent-home-container .main-container {
+﻿.parent-home-container .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +34,7 @@ body {
   align-items: center;
 }
 .parent-home-container .image-container img {
-  height: 100vh;
+  padding: 100px 0px 100px 0px !important;
   width: 100%;
   filter: grayscale(100%);
   padding-bottom: 120px;

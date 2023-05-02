@@ -1,8 +1,6 @@
 ﻿@import 'main';
 
 .parent-home-container {
-    @include displayWithHeightSettings($height: 100vh, $width: 100vw);
-
     .main-container {
         @include displayFlexbox();
 
@@ -36,9 +34,9 @@
 
     .image-container {
         @include displayFlexbox();
-
         img {
-            @include displayWithHeightSettings($height: 100vh, $width: 100%);
+            padding: 100px 0px 100px 0px !important;
+            width: 100%;
             filter: grayscale(100%);
             padding-bottom: 120px;
             padding-top: 50px;

@@ -72,7 +72,6 @@ namespace InventoryManager.Infrastructure
                 transactionLog.Property(s => s.Quantity).HasColumnName("Quantity");
                 transactionLog.Property(s => s.CreationDate).HasDefaultValue(DateTime.Now).HasColumnName("CreationDate");
                 transactionLog.Property(s => s.IsInput).HasColumnName("IsInput");
-                transactionLog.HasData(InitData.LoadLabelsTransactionLogs());
             });
 
             //Create UserSchema

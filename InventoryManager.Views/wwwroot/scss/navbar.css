@@ -1,22 +1,19 @@
-﻿@charset "UTF-8";
-﻿ html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
+﻿.navbar {
+  position: absolute !important;
+  width: 100%;
+  z-index: 1;
 }
-
-.navbar-main-container {
+.navbar .navbar-main-container {
   padding: 0px 48px !important;
 }
-.navbar-main-container svg {
+.navbar .navbar-main-container svg {
   color: #349977;
 }
-.navbar-main-container .navbar-brand {
+.navbar .navbar-main-container .navbar-brand {
   font-weight: bold;
   color: #193B39;
 }
-.navbar-main-container .navbar-nav li a {
+.navbar .navbar-main-container .navbar-nav li a {
   color: #193B39;
 }
 

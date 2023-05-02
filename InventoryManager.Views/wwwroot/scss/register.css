@@ -1,12 +1,4 @@
-﻿@charset "UTF-8";
-﻿ html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.form-registry-container {
+﻿.form-registry-container {
   display: flex;
   justify-content: center;
   align-items: center;

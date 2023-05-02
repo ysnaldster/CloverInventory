@@ -4,10 +4,11 @@
     .list-products-sub-container {
         margin-left: 40px;
         margin-right: 8px;
-
+        margin-top: 60px;
         h1 {
             color: $main-green;
         }
+
         .list-products-selected-categories-container {
             @include displayFlexbox($justify-content: init, $align-items: init);
 
