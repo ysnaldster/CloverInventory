@@ -9,101 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InventoryManager.Views
 build_property.RootNamespace = InventoryManager.Views
-build_property.ProjectDir = C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views\
+build_property.ProjectDir = C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Views\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Views
+build_property.MSBuildProjectDirectory = C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Views
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/App.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/FooterComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/FooterComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb290ZXJDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/HomeComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/HomeComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/DeleteProductComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/Product/DeleteProductComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XERlbGV0ZVByb2R1Y3RDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/EditProductComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/Product/EditProductComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEVkaXRQcm9kdWN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/InfoAlertProductComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/Product/InfoAlertProductComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEluZm9BbGVydFByb2R1Y3RDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Product/ListProductComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/Product/ListProductComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XExpc3RQcm9kdWN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/Storage/CreateStorageComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/Storage/CreateStorageComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdG9yYWdlXENyZWF0ZVN0b3JhZ2VDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/TransactionLog/CreateTransactionLogComponent.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/TransactionLog/CreateTransactionLogComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFuc2FjdGlvbkxvZ1xDcmVhdGVUcmFuc2FjdGlvbkxvZ0NvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Components/User/ModalCreateUser.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Components/User/ModalCreateUser.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyXE1vZGFsQ3JlYXRlVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Index.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/LoginPage.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/LoginPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Product/ProductPage.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/Product/ProductPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Storage/CreateStoragePage.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/Storage/CreateStoragePage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmFnZVxDcmVhdGVTdG9yYWdlUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/TransactionLog/CreateTransactionLogPage.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/TransactionLog/CreateTransactionLogPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNhY3Rpb25Mb2dcQ3JlYXRlVHJhbnNhY3Rpb25Mb2dQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/UserRegistryPage.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/UserRegistryPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclJlZ2lzdHJ5UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Shared/SurveyPrompt.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/_Imports.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Shared/MainLayout.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-pa7uabphq1
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Shared/NavMenu.razor]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3eo59dw9ai
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/Error.cshtml]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/_Host.cshtml]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ysnal/OneDrive/Escritorio/InventoryManager/InventoryManager.Views/Pages/_Layout.cshtml]
+[C:/Users/ysnal/OneDrive/Escritorio/developer/projects/InventoryManager/InventoryManager.Views/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

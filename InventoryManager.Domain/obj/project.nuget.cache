@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LjOsFtO1vQT7uLwSB5yjLkBHWWQ1pOVQTSJ5GHhUmxnLLkp7ZNgIFGQJZc3+0IpM1YxBE99NQz5nBNkfnmBbOw==",
+  "dgSpecHash": "4OdKpe+2WlNiAhzAMj9D7Jlz9sXtoC2Rt4hWJz61Xael+aIbmSHfsudWgtIO3RXYZbTsiveqfxECUthAPL6xmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

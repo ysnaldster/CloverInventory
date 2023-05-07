@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bGNIf65NOxZrCfgwfbg59R1xkKxp1J37pCp7Gyovu2q9shleqT36BNp0NmcJw/K5JkAH6QtzodQRaOtDynEq+w==",
+  "dgSpecHash": "RYCa+PK7gSn+XpbT2qWwfOei+yKINMXpG5fS5XQuhF55nTNhswbf2U+vDEVuN9eYiPD/qsq93nqaJxJ/sbwQYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj",
+  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ysnal\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",
     "C:\\Users\\ysnal\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",

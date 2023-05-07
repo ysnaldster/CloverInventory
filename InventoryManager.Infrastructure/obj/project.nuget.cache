@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DfFDvOQ0FXQIb33AeTpDFOryYTl81dv7bj83UWkVnE5zba6cGaTzx33EP5h9y2ctl4VWYcvzkY1qRdMgDAGjNQ==",
+  "dgSpecHash": "PEyZr6EG9ez+P+BkGAmt+hnWp1krIy+BHnd8BHMeOpof5Zfc8dcJ7Q4OY7jaHVNncKCCrdVok8rs0imJpIiKUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ysnal\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",
     "C:\\Users\\ysnal\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

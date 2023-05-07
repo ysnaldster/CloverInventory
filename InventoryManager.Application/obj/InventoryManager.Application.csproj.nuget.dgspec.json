@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj": {}
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj": {
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj",
+        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj",
         "projectName": "InventoryManager.Application",
-        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj",
+        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Application\\InventoryManager.Application.csproj",
         "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Application\\obj\\",
+        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
-                "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj"
+              "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj"
               },
-              "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj"
+              "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj"
               }
             }
           }
@@ -62,18 +62,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
         "projectName": "InventoryManager.Domain",
-        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
         "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\obj\\",
+        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -117,18 +117,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj": {
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj",
         "projectName": "InventoryManager.Infrastructure",
-        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\InventoryManager.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -145,8 +145,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
-                "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj"
+              "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj"
               }
             }
           }
@@ -196,7 +196,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

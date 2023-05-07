@@ -4,8 +4,13 @@
     @include displayFlexbox();
     padding: 0px 500px;
 
+    .form-registry-subcontainer{
+        @include displayFlexbox();
+    }
+
     .row {
         background-color: white;
+        margin-top: 80px;
     }
 
     p {

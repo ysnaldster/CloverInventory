@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {}
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
+    "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
         "projectName": "InventoryManager.Domain",
-        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
+        "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\InventoryManager.Domain.csproj",
         "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\InventoryManager\\InventoryManager.Domain\\obj\\",
+        "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\InventoryManager\\InventoryManager.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

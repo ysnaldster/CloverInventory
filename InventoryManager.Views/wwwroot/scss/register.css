@@ -4,8 +4,14 @@
   align-items: center;
   padding: 0px 500px;
 }
+.form-registry-container .form-registry-subcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .form-registry-container .row {
   background-color: white;
+  margin-top: 80px;
 }
 .form-registry-container p {
   color: #8a8e96;

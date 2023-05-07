@@ -10,3 +10,15 @@ C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Domain\obj\
 C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\refint\InventoryManager.Domain.dll
 C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.pdb
 C:\Users\ysnal\OneDrive\Escritorio\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\ref\InventoryManager.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\bin\Debug\net6.0\InventoryManager.Domain.deps.json
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\bin\Debug\net6.0\InventoryManager.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\bin\Debug\net6.0\InventoryManager.Domain.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.csproj.AssemblyReference.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.AssemblyInfoInputs.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.AssemblyInfo.cs
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\refint\InventoryManager.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\InventoryManager.Domain.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\InventoryManager\InventoryManager.Domain\obj\Debug\net6.0\ref\InventoryManager.Domain.dll
